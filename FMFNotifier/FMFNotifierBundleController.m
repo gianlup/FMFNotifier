@@ -8,9 +8,7 @@
 
 #import "FMFNotifierBundleController.h"
 #import <Preferences/PSSpecifier.h>
-
-#define kSetting_TemplateVersion_Name @"TemplateVersionExample"
-#define kSetting_TemplateVersion_Value @"1.0"
+#import <Security/Security.h>
 
 #define kUrl_FollowOnTwitter @"https://twitter.com/kokoabim"
 #define kUrl_VisitWebSite @"http://iosopendev.com"
@@ -29,13 +27,6 @@
     NSDictionary *specifierProperties = [specifier properties];
     NSString *specifierKey = [specifierProperties objectForKey:kPrefs_Key];
     
-    //Only from Code
-    if ([specifierKey isEqual:kSetting_TemplateVersion_Name]) {
-		value = kSetting_TemplateVersion_Value;
-        return value;
-	}
-    
-    //From plist
     NSString *plistPath = [[NSString alloc] initWithString:[specifierProperties objectForKey:kPrefs_Defaults]];
     plistPath = [NSString stringWithFormat:@"%@/%@.plist", kPrefs_Path, plistPath];
     if (plistPath) {

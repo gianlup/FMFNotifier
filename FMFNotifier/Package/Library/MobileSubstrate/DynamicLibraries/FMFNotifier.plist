@@ -4,14 +4,13 @@
 <dict>
 	<key>Filter</key>
 	<dict>
-		<key>Classes</key>
-		<array/>
-		<key>CoreFoundationVersion</key>
-		<array/>
-		<key>Executables</key>
-		<array/>
 		<key>Bundles</key>
-		<array/>
+		<array>
+			<string>com.apple.bulletinboard</string>
+			<string>com.apple.mobileme.fmf1</string>
+			<string>com.apple.aosnotifyd</string>
+			<string>com.apple.springboard</string>
+		</array>
 	</dict>
 </dict>
 </plist>

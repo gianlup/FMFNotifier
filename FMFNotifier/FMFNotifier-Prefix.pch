@@ -2,6 +2,8 @@
 // Prefix header for all source files of the 'FMFNotifier' target in the 'FMFNotifier' project
 //
 
+#define PreferencesPath @"/var/mobile/Library/Preferences/com.pugliagianluca.FMFNotifier.plist"
+
 #ifdef __OBJC__
     #import <Foundation/Foundation.h>
     #import <UIKit/UIKit.h>

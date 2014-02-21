@@ -10,42 +10,37 @@
 		99F5AA2418B7976500B205AF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99F5AA2318B7976500B205AF /* Foundation.framework */; };
 		99F5AA2C18B7976500B205AF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99F5AA2318B7976500B205AF /* Foundation.framework */; };
 		99F5AA2E18B7976500B205AF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99F5AA2D18B7976500B205AF /* UIKit.framework */; };
-		99F5AA3018B7976500B205AF /* Preferences.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99F5AA2F18B7976500B205AF /* Preferences.framework */; };
-		99F5AA3518B7976500B205AF /* control.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 99F5AA3418B7976500B205AF /* control.txt */; };
-		99F5AA3718B7976500B205AF /* control in CopyFiles */ = {isa = PBXBuildFile; fileRef = 99F5AA3618B7976500B205AF /* control */; };
-		99F5AA3A18B7976500B205AF /* PackageVersion.plist in CopyFiles */ = {isa = PBXBuildFile; fileRef = 99F5AA3918B7976500B205AF /* PackageVersion.plist */; };
-		99F5AA3D18B7976500B205AF /* FMFNotifierBundleController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99F5AA3C18B7976500B205AF /* FMFNotifierBundleController.m */; };
 		99F5AA3E18B7976500B205AF /* FMFNotifierBundleController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99F5AA3C18B7976500B205AF /* FMFNotifierBundleController.m */; };
 		99F5AA4018B7976500B205AF /* FMFNotifier.mm in Sources */ = {isa = PBXBuildFile; fileRef = 99F5AA3F18B7976500B205AF /* FMFNotifier.mm */; };
-		99F5AA4118B7976500B205AF /* FMFNotifier.mm in Sources */ = {isa = PBXBuildFile; fileRef = 99F5AA3F18B7976500B205AF /* FMFNotifier.mm */; };
-		99F5AA4418B7976500B205AF /* FMFNotifier-Info.plist in CopyFiles */ = {isa = PBXBuildFile; fileRef = 99F5AA4318B7976500B205AF /* FMFNotifier-Info.plist */; };
 		99F5AA4618B7976500B205AF /* FMFNotifierIcon@2x.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 99F5AA4518B7976500B205AF /* FMFNotifierIcon@2x.png */; };
 		99F5AA4818B7976500B205AF /* FMFNotifierIcon.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 99F5AA4718B7976500B205AF /* FMFNotifierIcon.png */; };
 		99F5AA4A18B7976500B205AF /* FMFNotifier.plist in CopyFiles */ = {isa = PBXBuildFile; fileRef = 99F5AA4918B7976500B205AF /* FMFNotifier.plist */; };
-		99F5AA4F18B7976500B205AF /* FMFNotifier.plist in CopyFiles */ = {isa = PBXBuildFile; fileRef = 99F5AA4E18B7976500B205AF /* FMFNotifier.plist */; };
-		99F5AA5318B7976500B205AF /* FMFNotifier.plist in CopyFiles */ = {isa = PBXBuildFile; fileRef = 99F5AA5218B7976500B205AF /* FMFNotifier.plist */; };
-		99F5AA5618B7976500B205AF /* readme.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 99F5AA5518B7976500B205AF /* readme.txt */; };
-		99F5AA5C18B7976500B205AF /* com.pugliagianluca.FMFNotifier.plist in CopyFiles */ = {isa = PBXBuildFile; fileRef = 99F5AA5B18B7976500B205AF /* com.pugliagianluca.FMFNotifier.plist */; };
+		99F5AA6718B7978F00B205AF /* Preferences.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99F5AA6618B7978F00B205AF /* Preferences.framework */; };
+		99F5AA6C18B798C700B205AF /* Notifier.h in Headers */ = {isa = PBXBuildFile; fileRef = 99F5AA6A18B798C700B205AF /* Notifier.h */; };
+		99F5AA6D18B798C700B205AF /* Notifier.m in Sources */ = {isa = PBXBuildFile; fileRef = 99F5AA6B18B798C700B205AF /* Notifier.m */; };
+		99F5AA6F18B7992C00B205AF /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99F5AA6E18B7992C00B205AF /* Security.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		99F5AA6818B797A400B205AF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 99F5AA1718B7976500B205AF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 99F5AA2A18B7976500B205AF;
+			remoteInfo = FMFNotifierPreferences;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		99F5AA2518B7976500B205AF /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
-			dstPath = /;
-			dstSubfolderSpec = 0;
+			dstPath = "";
+			dstSubfolderSpec = 7;
 			files = (
-				99F5AA5618B7976500B205AF /* readme.txt in CopyFiles */,
-				99F5AA3718B7976500B205AF /* control in CopyFiles */,
 				99F5AA4618B7976500B205AF /* FMFNotifierIcon@2x.png in CopyFiles */,
 				99F5AA4A18B7976500B205AF /* FMFNotifier.plist in CopyFiles */,
-				99F5AA3518B7976500B205AF /* control.txt in CopyFiles */,
-				99F5AA5318B7976500B205AF /* FMFNotifier.plist in CopyFiles */,
-				99F5AA4F18B7976500B205AF /* FMFNotifier.plist in CopyFiles */,
-				99F5AA4418B7976500B205AF /* FMFNotifier-Info.plist in CopyFiles */,
-				99F5AA5C18B7976500B205AF /* com.pugliagianluca.FMFNotifier.plist in CopyFiles */,
 				99F5AA4818B7976500B205AF /* FMFNotifierIcon.png in CopyFiles */,
-				99F5AA3A18B7976500B205AF /* PackageVersion.plist in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,7 +51,6 @@
 		99F5AA2318B7976500B205AF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		99F5AA2B18B7976500B205AF /* FMFNotifierPreferences.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FMFNotifierPreferences.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		99F5AA2D18B7976500B205AF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		99F5AA2F18B7976500B205AF /* Preferences.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Preferences.framework; path = Library/Frameworks/Preferences.framework; sourceTree = DEVELOPER_DIR; };
 		99F5AA3418B7976500B205AF /* control.txt */ = {isa = PBXFileReference; lastKnownFileType = text; name = control.txt; path = Package/DEBIAN/control.txt; sourceTree = "<group>"; };
 		99F5AA3618B7976500B205AF /* control */ = {isa = PBXFileReference; lastKnownFileType = text; name = control; path = Package/DEBIAN/control; sourceTree = "<group>"; };
 		99F5AA3918B7976500B205AF /* PackageVersion.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = PackageVersion.plist; sourceTree = "<group>"; };
@@ -69,9 +63,13 @@
 		99F5AA4918B7976500B205AF /* FMFNotifier.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = FMFNotifier.plist; path = Bundle/FMFNotifier.plist; sourceTree = "<group>"; };
 		99F5AA4E18B7976500B205AF /* FMFNotifier.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = FMFNotifier.plist; path = Package/Library/PreferenceLoader/Preferences/FMFNotifier.plist; sourceTree = "<group>"; };
 		99F5AA5218B7976500B205AF /* FMFNotifier.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = FMFNotifier.plist; path = Package/Library/MobileSubstrate/DynamicLibraries/FMFNotifier.plist; sourceTree = "<group>"; };
-		99F5AA5518B7976500B205AF /* readme.txt */ = {isa = PBXFileReference; lastKnownFileType = text; name = readme.txt; path = Package/Library/PreferenceBundles/readme.txt; sourceTree = "<group>"; };
 		99F5AA5B18B7976500B205AF /* com.pugliagianluca.FMFNotifier.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = com.pugliagianluca.FMFNotifier.plist; path = Package/var/mobile/Library/Preferences/com.pugliagianluca.FMFNotifier.plist; sourceTree = "<group>"; };
 		99F5AA5D18B7976500B205AF /* FMFNotifier-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FMFNotifier-Prefix.pch"; sourceTree = "<group>"; };
+		99F5AA6618B7978F00B205AF /* Preferences.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Preferences.framework; path = System/Library/PrivateFrameworks/Preferences.framework; sourceTree = SDKROOT; };
+		99F5AA6A18B798C700B205AF /* Notifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Notifier.h; sourceTree = "<group>"; };
+		99F5AA6B18B798C700B205AF /* Notifier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Notifier.m; sourceTree = "<group>"; };
+		99F5AA6E18B7992C00B205AF /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		99F5AA7018B79DCA00B205AF /* FMFNotifier.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = FMFNotifier.strings; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,9 +85,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99F5AA6F18B7992C00B205AF /* Security.framework in Frameworks */,
 				99F5AA2C18B7976500B205AF /* Foundation.framework in Frameworks */,
-				99F5AA3018B7976500B205AF /* Preferences.framework in Frameworks */,
 				99F5AA2E18B7976500B205AF /* UIKit.framework in Frameworks */,
+				99F5AA6718B7978F00B205AF /* Preferences.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,9 +116,10 @@
 		99F5AA2218B7976500B205AF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				99F5AA6E18B7992C00B205AF /* Security.framework */,
+				99F5AA6618B7978F00B205AF /* Preferences.framework */,
 				99F5AA2318B7976500B205AF /* Foundation.framework */,
 				99F5AA2D18B7976500B205AF /* UIKit.framework */,
-				99F5AA2F18B7976500B205AF /* Preferences.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -127,6 +127,8 @@
 		99F5AA3118B7976500B205AF /* FMFNotifier */ = {
 			isa = PBXGroup;
 			children = (
+				99F5AA6A18B798C700B205AF /* Notifier.h */,
+				99F5AA6B18B798C700B205AF /* Notifier.m */,
 				99F5AA3B18B7976500B205AF /* FMFNotifierBundleController.h */,
 				99F5AA3C18B7976500B205AF /* FMFNotifierBundleController.m */,
 				99F5AA3F18B7976500B205AF /* FMFNotifier.mm */,
@@ -159,6 +161,7 @@
 		99F5AA3818B7976500B205AF /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				99F5AA7018B79DCA00B205AF /* FMFNotifier.strings */,
 				99F5AA3918B7976500B205AF /* PackageVersion.plist */,
 				99F5AA5D18B7976500B205AF /* FMFNotifier-Prefix.pch */,
 			);
@@ -221,7 +224,6 @@
 		99F5AA5418B7976500B205AF /* PreferenceBundles */ = {
 			isa = PBXGroup;
 			children = (
-				99F5AA5518B7976500B205AF /* readme.txt */,
 			);
 			name = PreferenceBundles;
 			sourceTree = "<group>";
@@ -265,6 +267,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99F5AA6C18B798C700B205AF /* Notifier.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,6 +293,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				99F5AA6918B797A400B205AF /* PBXTargetDependency */,
 			);
 			name = FMFNotifier;
 			productName = FMFNotifier;
@@ -375,8 +379,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				99F5AA3D18B7976500B205AF /* FMFNotifierBundleController.m in Sources */,
 				99F5AA4018B7976500B205AF /* FMFNotifier.mm in Sources */,
+				99F5AA6D18B798C700B205AF /* Notifier.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,11 +389,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				99F5AA3E18B7976500B205AF /* FMFNotifierBundleController.m in Sources */,
-				99F5AA4118B7976500B205AF /* FMFNotifier.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		99F5AA6918B797A400B205AF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 99F5AA2A18B7976500B205AF /* FMFNotifierPreferences */;
+			targetProxy = 99F5AA6818B797A400B205AF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		99F5AA5E18B7976500B205AF /* Debug */ = {
@@ -496,6 +507,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(SDKROOT)$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FMFNotifier/FMFNotifier-Prefix.pch";
@@ -512,6 +524,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(SDKROOT)$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FMFNotifier/FMFNotifier-Prefix.pch";
