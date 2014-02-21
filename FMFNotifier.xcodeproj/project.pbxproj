@@ -1,0 +1,556 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		99F5AA2418B7976500B205AF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99F5AA2318B7976500B205AF /* Foundation.framework */; };
+		99F5AA2C18B7976500B205AF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99F5AA2318B7976500B205AF /* Foundation.framework */; };
+		99F5AA2E18B7976500B205AF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99F5AA2D18B7976500B205AF /* UIKit.framework */; };
+		99F5AA3018B7976500B205AF /* Preferences.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99F5AA2F18B7976500B205AF /* Preferences.framework */; };
+		99F5AA3518B7976500B205AF /* control.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 99F5AA3418B7976500B205AF /* control.txt */; };
+		99F5AA3718B7976500B205AF /* control in CopyFiles */ = {isa = PBXBuildFile; fileRef = 99F5AA3618B7976500B205AF /* control */; };
+		99F5AA3A18B7976500B205AF /* PackageVersion.plist in CopyFiles */ = {isa = PBXBuildFile; fileRef = 99F5AA3918B7976500B205AF /* PackageVersion.plist */; };
+		99F5AA3D18B7976500B205AF /* FMFNotifierBundleController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99F5AA3C18B7976500B205AF /* FMFNotifierBundleController.m */; };
+		99F5AA3E18B7976500B205AF /* FMFNotifierBundleController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99F5AA3C18B7976500B205AF /* FMFNotifierBundleController.m */; };
+		99F5AA4018B7976500B205AF /* FMFNotifier.mm in Sources */ = {isa = PBXBuildFile; fileRef = 99F5AA3F18B7976500B205AF /* FMFNotifier.mm */; };
+		99F5AA4118B7976500B205AF /* FMFNotifier.mm in Sources */ = {isa = PBXBuildFile; fileRef = 99F5AA3F18B7976500B205AF /* FMFNotifier.mm */; };
+		99F5AA4418B7976500B205AF /* FMFNotifier-Info.plist in CopyFiles */ = {isa = PBXBuildFile; fileRef = 99F5AA4318B7976500B205AF /* FMFNotifier-Info.plist */; };
+		99F5AA4618B7976500B205AF /* FMFNotifierIcon@2x.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 99F5AA4518B7976500B205AF /* FMFNotifierIcon@2x.png */; };
+		99F5AA4818B7976500B205AF /* FMFNotifierIcon.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 99F5AA4718B7976500B205AF /* FMFNotifierIcon.png */; };
+		99F5AA4A18B7976500B205AF /* FMFNotifier.plist in CopyFiles */ = {isa = PBXBuildFile; fileRef = 99F5AA4918B7976500B205AF /* FMFNotifier.plist */; };
+		99F5AA4F18B7976500B205AF /* FMFNotifier.plist in CopyFiles */ = {isa = PBXBuildFile; fileRef = 99F5AA4E18B7976500B205AF /* FMFNotifier.plist */; };
+		99F5AA5318B7976500B205AF /* FMFNotifier.plist in CopyFiles */ = {isa = PBXBuildFile; fileRef = 99F5AA5218B7976500B205AF /* FMFNotifier.plist */; };
+		99F5AA5618B7976500B205AF /* readme.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 99F5AA5518B7976500B205AF /* readme.txt */; };
+		99F5AA5C18B7976500B205AF /* com.pugliagianluca.FMFNotifier.plist in CopyFiles */ = {isa = PBXBuildFile; fileRef = 99F5AA5B18B7976500B205AF /* com.pugliagianluca.FMFNotifier.plist */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		99F5AA2518B7976500B205AF /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /;
+			dstSubfolderSpec = 0;
+			files = (
+				99F5AA5618B7976500B205AF /* readme.txt in CopyFiles */,
+				99F5AA3718B7976500B205AF /* control in CopyFiles */,
+				99F5AA4618B7976500B205AF /* FMFNotifierIcon@2x.png in CopyFiles */,
+				99F5AA4A18B7976500B205AF /* FMFNotifier.plist in CopyFiles */,
+				99F5AA3518B7976500B205AF /* control.txt in CopyFiles */,
+				99F5AA5318B7976500B205AF /* FMFNotifier.plist in CopyFiles */,
+				99F5AA4F18B7976500B205AF /* FMFNotifier.plist in CopyFiles */,
+				99F5AA4418B7976500B205AF /* FMFNotifier-Info.plist in CopyFiles */,
+				99F5AA5C18B7976500B205AF /* com.pugliagianluca.FMFNotifier.plist in CopyFiles */,
+				99F5AA4818B7976500B205AF /* FMFNotifierIcon.png in CopyFiles */,
+				99F5AA3A18B7976500B205AF /* PackageVersion.plist in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		99F5AA2018B7976500B205AF /* FMFNotifier.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = FMFNotifier.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		99F5AA2318B7976500B205AF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		99F5AA2B18B7976500B205AF /* FMFNotifierPreferences.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FMFNotifierPreferences.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		99F5AA2D18B7976500B205AF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		99F5AA2F18B7976500B205AF /* Preferences.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Preferences.framework; path = Library/Frameworks/Preferences.framework; sourceTree = DEVELOPER_DIR; };
+		99F5AA3418B7976500B205AF /* control.txt */ = {isa = PBXFileReference; lastKnownFileType = text; name = control.txt; path = Package/DEBIAN/control.txt; sourceTree = "<group>"; };
+		99F5AA3618B7976500B205AF /* control */ = {isa = PBXFileReference; lastKnownFileType = text; name = control; path = Package/DEBIAN/control; sourceTree = "<group>"; };
+		99F5AA3918B7976500B205AF /* PackageVersion.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = PackageVersion.plist; sourceTree = "<group>"; };
+		99F5AA3B18B7976500B205AF /* FMFNotifierBundleController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMFNotifierBundleController.h; sourceTree = "<group>"; };
+		99F5AA3C18B7976500B205AF /* FMFNotifierBundleController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMFNotifierBundleController.m; sourceTree = "<group>"; };
+		99F5AA3F18B7976500B205AF /* FMFNotifier.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = FMFNotifier.mm; sourceTree = "<group>"; };
+		99F5AA4318B7976500B205AF /* FMFNotifier-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "FMFNotifier-Info.plist"; path = "Bundle/FMFNotifier-Info.plist"; sourceTree = "<group>"; };
+		99F5AA4518B7976500B205AF /* FMFNotifierIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "FMFNotifierIcon@2x.png"; path = "Bundle/FMFNotifierIcon@2x.png"; sourceTree = "<group>"; };
+		99F5AA4718B7976500B205AF /* FMFNotifierIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = FMFNotifierIcon.png; path = Bundle/FMFNotifierIcon.png; sourceTree = "<group>"; };
+		99F5AA4918B7976500B205AF /* FMFNotifier.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = FMFNotifier.plist; path = Bundle/FMFNotifier.plist; sourceTree = "<group>"; };
+		99F5AA4E18B7976500B205AF /* FMFNotifier.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = FMFNotifier.plist; path = Package/Library/PreferenceLoader/Preferences/FMFNotifier.plist; sourceTree = "<group>"; };
+		99F5AA5218B7976500B205AF /* FMFNotifier.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = FMFNotifier.plist; path = Package/Library/MobileSubstrate/DynamicLibraries/FMFNotifier.plist; sourceTree = "<group>"; };
+		99F5AA5518B7976500B205AF /* readme.txt */ = {isa = PBXFileReference; lastKnownFileType = text; name = readme.txt; path = Package/Library/PreferenceBundles/readme.txt; sourceTree = "<group>"; };
+		99F5AA5B18B7976500B205AF /* com.pugliagianluca.FMFNotifier.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = com.pugliagianluca.FMFNotifier.plist; path = Package/var/mobile/Library/Preferences/com.pugliagianluca.FMFNotifier.plist; sourceTree = "<group>"; };
+		99F5AA5D18B7976500B205AF /* FMFNotifier-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FMFNotifier-Prefix.pch"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		99F5AA1C18B7976500B205AF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99F5AA2418B7976500B205AF /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		99F5AA2718B7976500B205AF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99F5AA2C18B7976500B205AF /* Foundation.framework in Frameworks */,
+				99F5AA3018B7976500B205AF /* Preferences.framework in Frameworks */,
+				99F5AA2E18B7976500B205AF /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		99F5AA1618B7976500B205AF = {
+			isa = PBXGroup;
+			children = (
+				99F5AA3118B7976500B205AF /* FMFNotifier */,
+				99F5AA2218B7976500B205AF /* Frameworks */,
+				99F5AA2118B7976500B205AF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		99F5AA2118B7976500B205AF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				99F5AA2018B7976500B205AF /* FMFNotifier.dylib */,
+				99F5AA2B18B7976500B205AF /* FMFNotifierPreferences.bundle */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		99F5AA2218B7976500B205AF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				99F5AA2318B7976500B205AF /* Foundation.framework */,
+				99F5AA2D18B7976500B205AF /* UIKit.framework */,
+				99F5AA2F18B7976500B205AF /* Preferences.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		99F5AA3118B7976500B205AF /* FMFNotifier */ = {
+			isa = PBXGroup;
+			children = (
+				99F5AA3B18B7976500B205AF /* FMFNotifierBundleController.h */,
+				99F5AA3C18B7976500B205AF /* FMFNotifierBundleController.m */,
+				99F5AA3F18B7976500B205AF /* FMFNotifier.mm */,
+				99F5AA3218B7976500B205AF /* Package */,
+				99F5AA4218B7976500B205AF /* Bundle */,
+				99F5AA3818B7976500B205AF /* Supporting Files */,
+			);
+			path = FMFNotifier;
+			sourceTree = "<group>";
+		};
+		99F5AA3218B7976500B205AF /* Package */ = {
+			isa = PBXGroup;
+			children = (
+				99F5AA3318B7976500B205AF /* DEBIAN */,
+				99F5AA4B18B7976500B205AF /* Library */,
+				99F5AA5718B7976500B205AF /* var */,
+			);
+			name = Package;
+			sourceTree = "<group>";
+		};
+		99F5AA3318B7976500B205AF /* DEBIAN */ = {
+			isa = PBXGroup;
+			children = (
+				99F5AA3418B7976500B205AF /* control.txt */,
+				99F5AA3618B7976500B205AF /* control */,
+			);
+			name = DEBIAN;
+			sourceTree = "<group>";
+		};
+		99F5AA3818B7976500B205AF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				99F5AA3918B7976500B205AF /* PackageVersion.plist */,
+				99F5AA5D18B7976500B205AF /* FMFNotifier-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		99F5AA4218B7976500B205AF /* Bundle */ = {
+			isa = PBXGroup;
+			children = (
+				99F5AA4318B7976500B205AF /* FMFNotifier-Info.plist */,
+				99F5AA4518B7976500B205AF /* FMFNotifierIcon@2x.png */,
+				99F5AA4718B7976500B205AF /* FMFNotifierIcon.png */,
+				99F5AA4918B7976500B205AF /* FMFNotifier.plist */,
+			);
+			name = Bundle;
+			sourceTree = "<group>";
+		};
+		99F5AA4B18B7976500B205AF /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				99F5AA4C18B7976500B205AF /* PreferenceLoader */,
+				99F5AA5018B7976500B205AF /* MobileSubstrate */,
+				99F5AA5418B7976500B205AF /* PreferenceBundles */,
+			);
+			name = Library;
+			sourceTree = "<group>";
+		};
+		99F5AA4C18B7976500B205AF /* PreferenceLoader */ = {
+			isa = PBXGroup;
+			children = (
+				99F5AA4D18B7976500B205AF /* Preferences */,
+			);
+			name = PreferenceLoader;
+			sourceTree = "<group>";
+		};
+		99F5AA4D18B7976500B205AF /* Preferences */ = {
+			isa = PBXGroup;
+			children = (
+				99F5AA4E18B7976500B205AF /* FMFNotifier.plist */,
+			);
+			name = Preferences;
+			sourceTree = "<group>";
+		};
+		99F5AA5018B7976500B205AF /* MobileSubstrate */ = {
+			isa = PBXGroup;
+			children = (
+				99F5AA5118B7976500B205AF /* DynamicLibraries */,
+			);
+			name = MobileSubstrate;
+			sourceTree = "<group>";
+		};
+		99F5AA5118B7976500B205AF /* DynamicLibraries */ = {
+			isa = PBXGroup;
+			children = (
+				99F5AA5218B7976500B205AF /* FMFNotifier.plist */,
+			);
+			name = DynamicLibraries;
+			sourceTree = "<group>";
+		};
+		99F5AA5418B7976500B205AF /* PreferenceBundles */ = {
+			isa = PBXGroup;
+			children = (
+				99F5AA5518B7976500B205AF /* readme.txt */,
+			);
+			name = PreferenceBundles;
+			sourceTree = "<group>";
+		};
+		99F5AA5718B7976500B205AF /* var */ = {
+			isa = PBXGroup;
+			children = (
+				99F5AA5818B7976500B205AF /* mobile */,
+			);
+			name = var;
+			sourceTree = "<group>";
+		};
+		99F5AA5818B7976500B205AF /* mobile */ = {
+			isa = PBXGroup;
+			children = (
+				99F5AA5918B7976500B205AF /* Library */,
+			);
+			name = mobile;
+			sourceTree = "<group>";
+		};
+		99F5AA5918B7976500B205AF /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				99F5AA5A18B7976500B205AF /* Preferences */,
+			);
+			name = Library;
+			sourceTree = "<group>";
+		};
+		99F5AA5A18B7976500B205AF /* Preferences */ = {
+			isa = PBXGroup;
+			children = (
+				99F5AA5B18B7976500B205AF /* com.pugliagianluca.FMFNotifier.plist */,
+			);
+			name = Preferences;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		99F5AA1D18B7976500B205AF /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		99F5AA2818B7976500B205AF /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		99F5AA1F18B7976500B205AF /* FMFNotifier */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 99F5AA6018B7976500B205AF /* Build configuration list for PBXNativeTarget "FMFNotifier" */;
+			buildPhases = (
+				99F5AA1B18B7976500B205AF /* Sources */,
+				99F5AA1C18B7976500B205AF /* Frameworks */,
+				99F5AA1D18B7976500B205AF /* Headers */,
+				99F5AA1E18B7976500B205AF /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FMFNotifier;
+			productName = FMFNotifier;
+			productReference = 99F5AA2018B7976500B205AF /* FMFNotifier.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+		99F5AA2A18B7976500B205AF /* FMFNotifierPreferences */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 99F5AA6318B7976500B205AF /* Build configuration list for PBXNativeTarget "FMFNotifierPreferences" */;
+			buildPhases = (
+				99F5AA2518B7976500B205AF /* CopyFiles */,
+				99F5AA2618B7976500B205AF /* Sources */,
+				99F5AA2718B7976500B205AF /* Frameworks */,
+				99F5AA2818B7976500B205AF /* Headers */,
+				99F5AA2918B7976500B205AF /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FMFNotifierPreferences;
+			productName = FMFNotifierPreferences;
+			productReference = 99F5AA2B18B7976500B205AF /* FMFNotifierPreferences.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		99F5AA1718B7976500B205AF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+			};
+			buildConfigurationList = 99F5AA1A18B7976500B205AF /* Build configuration list for PBXProject "FMFNotifier" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 99F5AA1618B7976500B205AF;
+			productRefGroup = 99F5AA2118B7976500B205AF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				99F5AA1F18B7976500B205AF /* FMFNotifier */,
+				99F5AA2A18B7976500B205AF /* FMFNotifierPreferences */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		99F5AA1E18B7976500B205AF /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/opt/iOSOpenDev/bin/iosod --xcbp";
+		};
+		99F5AA2918B7976500B205AF /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cp -r $TARGET_BUILD_DIR/$TARGET_NAME.bundle $PROJECT_DIR/$PROJECT_NAME/Package/Library/PreferenceBundles";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		99F5AA1B18B7976500B205AF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99F5AA3D18B7976500B205AF /* FMFNotifierBundleController.m in Sources */,
+				99F5AA4018B7976500B205AF /* FMFNotifier.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		99F5AA2618B7976500B205AF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99F5AA3E18B7976500B205AF /* FMFNotifierBundleController.m in Sources */,
+				99F5AA4118B7976500B205AF /* FMFNotifier.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		99F5AA5E18B7976500B205AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_ENABLE_MODULES = YES;
+				COPY_PHASE_STRIP = NO;
+				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "*.nib *.lproj *.gch (*) .DS_Store CVS .svn .git .hg *.xcodeproj *.xcode *.pbproj *.pbxproj";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(iOSOpenDevPath)/frameworks/**",
+					"$(SDKROOT)/System/Library/PrivateFrameworks",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(iOSOpenDevPath)/include/**";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LIBRARY_SEARCH_PATHS = "$(iOSOpenDevPath)/lib/**";
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = NO;
+				iOSOpenDevPath = /opt/iOSOpenDev;
+			};
+			name = Debug;
+		};
+		99F5AA5F18B7976500B205AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_ENABLE_MODULES = YES;
+				COPY_PHASE_STRIP = YES;
+				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "*.nib *.lproj *.gch (*) .DS_Store CVS .svn .git .hg *.xcodeproj *.xcode *.pbproj *.pbxproj";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(iOSOpenDevPath)/frameworks/**",
+					"$(SDKROOT)/System/Library/PrivateFrameworks",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(iOSOpenDevPath)/include/**";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LIBRARY_SEARCH_PATHS = "$(iOSOpenDevPath)/lib/**";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				iOSOpenDevPath = /opt/iOSOpenDev;
+			};
+			name = Release;
+		};
+		99F5AA6118B7976500B205AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FMFNotifier/FMFNotifier-Prefix.pch";
+				INSTALL_PATH = /Library/MobileSubstrate/DynamicLibraries;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				iOSOpenDevBuildPackageOnAnyBuild = NO;
+				iOSOpenDevCopyOnBuild = NO;
+				iOSOpenDevDevice = "";
+				iOSOpenDevInstallOnAnyBuild = NO;
+				iOSOpenDevInstallOnProfiling = YES;
+				iOSOpenDevRespringOnInstall = YES;
+				iOSOpenDevUsePackageVersionPList = YES;
+			};
+			name = Debug;
+		};
+		99F5AA6218B7976500B205AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FMFNotifier/FMFNotifier-Prefix.pch";
+				INSTALL_PATH = /Library/MobileSubstrate/DynamicLibraries;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				iOSOpenDevBuildPackageOnAnyBuild = NO;
+				iOSOpenDevCopyOnBuild = NO;
+				iOSOpenDevDevice = "";
+				iOSOpenDevInstallOnAnyBuild = NO;
+				iOSOpenDevInstallOnProfiling = YES;
+				iOSOpenDevRespringOnInstall = YES;
+				iOSOpenDevUsePackageVersionPList = YES;
+			};
+			name = Release;
+		};
+		99F5AA6418B7976500B205AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FMFNotifier/FMFNotifier-Prefix.pch";
+				INFOPLIST_FILE = "FMFNotifier/Bundle/FMFNotifier-Info.plist";
+				INSTALL_PATH = /Library/PreferenceBundles;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		99F5AA6518B7976500B205AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FMFNotifier/FMFNotifier-Prefix.pch";
+				INFOPLIST_FILE = "FMFNotifier/Bundle/FMFNotifier-Info.plist";
+				INSTALL_PATH = /Library/PreferenceBundles;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		99F5AA1A18B7976500B205AF /* Build configuration list for PBXProject "FMFNotifier" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				99F5AA5E18B7976500B205AF /* Debug */,
+				99F5AA5F18B7976500B205AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		99F5AA6018B7976500B205AF /* Build configuration list for PBXNativeTarget "FMFNotifier" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				99F5AA6118B7976500B205AF /* Debug */,
+				99F5AA6218B7976500B205AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		99F5AA6318B7976500B205AF /* Build configuration list for PBXNativeTarget "FMFNotifierPreferences" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				99F5AA6418B7976500B205AF /* Debug */,
+				99F5AA6518B7976500B205AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 99F5AA1718B7976500B205AF /* Project object */;
+}
