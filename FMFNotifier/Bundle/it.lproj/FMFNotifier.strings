@@ -1,0 +1,13 @@
+/* 
+  FMFNotifier.strings
+  FMFNotifier
+
+  Created by Gianluca Puglia on 21/02/14.
+
+*/
+
+"ENABLED" = "Attivo";
+"ENTER_PSW_LABEL" = "Inserisci Password";
+"PASSWORD" = "Password";
+"VISIT_WEBSITE" = "Visita Sito Web";
+"DONATION" = "Donazione";

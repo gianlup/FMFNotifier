@@ -8,7 +8,7 @@
 
 #import "FMFNotifierBundleController.h"
 #import <Preferences/PSSpecifier.h>
-#import <Security/Security.h>
+#import "KeychainItemWrapper.h"
 
 #define kUrl_FollowOnTwitter @"https://twitter.com/kokoabim"
 #define kUrl_VisitWebSite @"http://iosopendev.com"
@@ -26,24 +26,29 @@
 	id value = nil;
     NSDictionary *specifierProperties = [specifier properties];
     NSString *specifierKey = [specifierProperties objectForKey:kPrefs_Key];
-    
     NSString *plistPath = [[NSString alloc] initWithString:[specifierProperties objectForKey:kPrefs_Defaults]];
     plistPath = [NSString stringWithFormat:@"%@/%@.plist", kPrefs_Path, plistPath];
     if (plistPath) {
         if (![[NSFileManager defaultManager] fileExistsAtPath:plistPath]) {
             return value;
         }
-        NSDictionary *dict = [[NSDictionary alloc] initWithContentsOfFile:plistPath];
-        id objectValue = [dict objectForKey:specifierKey];
-        if (objectValue) {
-            value = [NSString stringWithFormat:@"%@", objectValue];
-            NSLog(@"read key '%@' with value '%@' from plist '%@'", specifierKey, value, plistPath);
+        if ([specifierKey isEqualToString:@"password"]) {
+            KeychainItemWrapper *keychainItem = [[KeychainItemWrapper alloc] initWithIdentifier:@"FMFNotifier" accessGroup:nil];
+            return [keychainItem objectForKey:(__bridge id)kSecValueData];
         }
         else {
-            NSLog(@"key '%@' not found in plist '%@'", specifierKey, plistPath);
+            //NSDictionary *dict = [[NSDictionary alloc] initWithContentsOfFile:plistPath];
+            //id objectValue = [dict objectForKey:specifierKey];
+            //        if (password) {
+            //            value = [NSString stringWithFormat:@"%@", objectValue];
+            //            NSLog(@"read key '%@' with value '%@' from plist '%@'", specifierKey, value, plistPath);
+            //        }
+            //        else {
+            //            NSLog(@"key '%@' not found in plist '%@'", specifierKey, plistPath);
+            //        }
         }
     }
-	return value;
+	return nil;
 }
 
 - (void)setValue:(id)value forSpecifier:(PSSpecifier*)specifier {
@@ -57,11 +62,21 @@
         if (![[NSFileManager defaultManager] fileExistsAtPath:plistPath]) {
             return;
         }
-        NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithContentsOfFile:plistPath];
-        [dict setObject:value forKey:specifierKey];
-        [dict writeToFile:plistPath atomically:YES];
-        NSLog(@"saved key '%@' with value '%@' to plist '%@'", specifierKey, value, plistPath);
+        if ([specifierKey isEqualToString:@"password"]) {
+            KeychainItemWrapper *keychainItem = [[KeychainItemWrapper alloc] initWithIdentifier:@"FMFNotifier" accessGroup:nil];
+            [keychainItem setObject:value forKey:kSecValueData];
+            NSLog(@"new password saved!");
+            return;
+        }
+        else {
+            //NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithContentsOfFile:plistPath];
+            //[dict setObject:value forKey:specifierKey];
+            //[dict writeToFile:plistPath atomically:YES];
+            NSLog(@"saved key '%@' with value '%@' to plist '%@'", specifierKey, value, plistPath);
+            return;
+        }
     }
+    return;
 }
 
 - (void)followOnTwitter:(PSSpecifier*)specifier {

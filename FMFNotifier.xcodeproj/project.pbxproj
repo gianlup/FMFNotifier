@@ -12,13 +12,18 @@
 		99F5AA2E18B7976500B205AF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99F5AA2D18B7976500B205AF /* UIKit.framework */; };
 		99F5AA3E18B7976500B205AF /* FMFNotifierBundleController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99F5AA3C18B7976500B205AF /* FMFNotifierBundleController.m */; };
 		99F5AA4018B7976500B205AF /* FMFNotifier.mm in Sources */ = {isa = PBXBuildFile; fileRef = 99F5AA3F18B7976500B205AF /* FMFNotifier.mm */; };
-		99F5AA4618B7976500B205AF /* FMFNotifierIcon@2x.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 99F5AA4518B7976500B205AF /* FMFNotifierIcon@2x.png */; };
-		99F5AA4818B7976500B205AF /* FMFNotifierIcon.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 99F5AA4718B7976500B205AF /* FMFNotifierIcon.png */; };
-		99F5AA4A18B7976500B205AF /* FMFNotifier.plist in CopyFiles */ = {isa = PBXBuildFile; fileRef = 99F5AA4918B7976500B205AF /* FMFNotifier.plist */; };
 		99F5AA6718B7978F00B205AF /* Preferences.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99F5AA6618B7978F00B205AF /* Preferences.framework */; };
 		99F5AA6C18B798C700B205AF /* Notifier.h in Headers */ = {isa = PBXBuildFile; fileRef = 99F5AA6A18B798C700B205AF /* Notifier.h */; };
 		99F5AA6D18B798C700B205AF /* Notifier.m in Sources */ = {isa = PBXBuildFile; fileRef = 99F5AA6B18B798C700B205AF /* Notifier.m */; };
 		99F5AA6F18B7992C00B205AF /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99F5AA6E18B7992C00B205AF /* Security.framework */; };
+		99F5AA8518B7ADA000B205AF /* FMFNotifierIcon@2x.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 99F5AA4518B7976500B205AF /* FMFNotifierIcon@2x.png */; };
+		99F5AA8618B7ADA000B205AF /* FMFNotifierIcon.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 99F5AA4718B7976500B205AF /* FMFNotifierIcon.png */; };
+		99F5AA8718B7ADA000B205AF /* FMFNotifier.plist in CopyFiles */ = {isa = PBXBuildFile; fileRef = 99F5AA4918B7976500B205AF /* FMFNotifier.plist */; };
+		99F5AA8818B7ADA000B205AF /* FMFNotifier.strings in CopyFiles */ = {isa = PBXBuildFile; fileRef = 99F5AA8218B7ABAE00B205AF /* FMFNotifier.strings */; };
+		99F5AAA618B7B85C00B205AF /* KeychainItemWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 99F5AAA418B7B85C00B205AF /* KeychainItemWrapper.h */; };
+		99F5AAA718B7B85C00B205AF /* KeychainItemWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 99F5AAA518B7B85C00B205AF /* KeychainItemWrapper.m */; };
+		99F5AAA818B7B98E00B205AF /* KeychainItemWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 99F5AAA518B7B85C00B205AF /* KeychainItemWrapper.m */; };
+		99F5AAA918B7BA3100B205AF /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99F5AA6E18B7992C00B205AF /* Security.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,9 +43,10 @@
 			dstPath = "";
 			dstSubfolderSpec = 7;
 			files = (
-				99F5AA4618B7976500B205AF /* FMFNotifierIcon@2x.png in CopyFiles */,
-				99F5AA4A18B7976500B205AF /* FMFNotifier.plist in CopyFiles */,
-				99F5AA4818B7976500B205AF /* FMFNotifierIcon.png in CopyFiles */,
+				99F5AA8518B7ADA000B205AF /* FMFNotifierIcon@2x.png in CopyFiles */,
+				99F5AA8618B7ADA000B205AF /* FMFNotifierIcon.png in CopyFiles */,
+				99F5AA8718B7ADA000B205AF /* FMFNotifier.plist in CopyFiles */,
+				99F5AA8818B7ADA000B205AF /* FMFNotifier.strings in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,7 +75,10 @@
 		99F5AA6A18B798C700B205AF /* Notifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Notifier.h; sourceTree = "<group>"; };
 		99F5AA6B18B798C700B205AF /* Notifier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Notifier.m; sourceTree = "<group>"; };
 		99F5AA6E18B7992C00B205AF /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		99F5AA7018B79DCA00B205AF /* FMFNotifier.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = FMFNotifier.strings; sourceTree = SOURCE_ROOT; };
+		99F5AA8118B7ABAE00B205AF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/FMFNotifier.strings; sourceTree = "<group>"; };
+		99F5AA8318B7ABBA00B205AF /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/FMFNotifier.strings; sourceTree = "<group>"; };
+		99F5AAA418B7B85C00B205AF /* KeychainItemWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeychainItemWrapper.h; sourceTree = "<group>"; };
+		99F5AAA518B7B85C00B205AF /* KeychainItemWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeychainItemWrapper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99F5AAA918B7BA3100B205AF /* Security.framework in Frameworks */,
 				99F5AA2418B7976500B205AF /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -127,6 +137,8 @@
 		99F5AA3118B7976500B205AF /* FMFNotifier */ = {
 			isa = PBXGroup;
 			children = (
+				99F5AAA418B7B85C00B205AF /* KeychainItemWrapper.h */,
+				99F5AAA518B7B85C00B205AF /* KeychainItemWrapper.m */,
 				99F5AA6A18B798C700B205AF /* Notifier.h */,
 				99F5AA6B18B798C700B205AF /* Notifier.m */,
 				99F5AA3B18B7976500B205AF /* FMFNotifierBundleController.h */,
@@ -161,7 +173,6 @@
 		99F5AA3818B7976500B205AF /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				99F5AA7018B79DCA00B205AF /* FMFNotifier.strings */,
 				99F5AA3918B7976500B205AF /* PackageVersion.plist */,
 				99F5AA5D18B7976500B205AF /* FMFNotifier-Prefix.pch */,
 			);
@@ -175,6 +186,7 @@
 				99F5AA4518B7976500B205AF /* FMFNotifierIcon@2x.png */,
 				99F5AA4718B7976500B205AF /* FMFNotifierIcon.png */,
 				99F5AA4918B7976500B205AF /* FMFNotifier.plist */,
+				99F5AA8218B7ABAE00B205AF /* FMFNotifier.strings */,
 			);
 			name = Bundle;
 			sourceTree = "<group>";
@@ -268,6 +280,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				99F5AA6C18B798C700B205AF /* Notifier.h in Headers */,
+				99F5AAA618B7B85C00B205AF /* KeychainItemWrapper.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,6 +302,7 @@
 				99F5AA1C18B7976500B205AF /* Frameworks */,
 				99F5AA1D18B7976500B205AF /* Headers */,
 				99F5AA1E18B7976500B205AF /* ShellScript */,
+				99F5AAA218B7B63900B205AF /* Resources */,
 			);
 			buildRules = (
 			);
@@ -333,6 +347,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				it,
 			);
 			mainGroup = 99F5AA1618B7976500B205AF;
 			productRefGroup = 99F5AA2118B7976500B205AF /* Products */;
@@ -344,6 +359,16 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		99F5AAA218B7B63900B205AF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
 		99F5AA1E18B7976500B205AF /* ShellScript */ = {
@@ -370,7 +395,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "cp -r $TARGET_BUILD_DIR/$TARGET_NAME.bundle $PROJECT_DIR/$PROJECT_NAME/Package/Library/PreferenceBundles";
+			shellScript = "rm -f $PROJECT_DIR/$PROJECT_NAME/Package/Library/PreferenceBundles/$TARGET_NAME.bundle\ncp -r $TARGET_BUILD_DIR/$TARGET_NAME.bundle $PROJECT_DIR/$PROJECT_NAME/Package/Library/PreferenceBundles";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -381,6 +406,7 @@
 			files = (
 				99F5AA4018B7976500B205AF /* FMFNotifier.mm in Sources */,
 				99F5AA6D18B798C700B205AF /* Notifier.m in Sources */,
+				99F5AAA718B7B85C00B205AF /* KeychainItemWrapper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,6 +414,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99F5AAA818B7B98E00B205AF /* KeychainItemWrapper.m in Sources */,
 				99F5AA3E18B7976500B205AF /* FMFNotifierBundleController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -401,6 +428,19 @@
 			targetProxy = 99F5AA6818B797A400B205AF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		99F5AA8218B7ABAE00B205AF /* FMFNotifier.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				99F5AA8118B7ABAE00B205AF /* en */,
+				99F5AA8318B7ABBA00B205AF /* it */,
+			);
+			name = FMFNotifier.strings;
+			path = Bundle;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		99F5AA5E18B7976500B205AF /* Debug */ = {
@@ -554,6 +594,7 @@
 				99F5AA6218B7976500B205AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		99F5AA6318B7976500B205AF /* Build configuration list for PBXNativeTarget "FMFNotifierPreferences" */ = {
 			isa = XCConfigurationList;
@@ -562,6 +603,7 @@
 				99F5AA6518B7976500B205AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -12,7 +12,7 @@
 			<key>isStaticText</key>
 			<true/>
 			<key>label</key>
-			<string>PROVA</string>
+			<string></string>
 		</dict>
 		<dict>
 			<key>cell</key>
@@ -22,7 +22,7 @@
 			<key>key</key>
 			<string>enabledSwitch</string>
 			<key>label</key>
-			<string>Enabled</string>
+			<string>ENABLED</string>
 			<key>PostNotification</key>
 			<string>com.pugliagianluca.FMFNotifier.settingsChanged</string>
 			<key>defaults</key>
@@ -34,7 +34,7 @@
 			<key>isStaticText</key>
 			<true/>
 			<key>label</key>
-			<string>Enter FMF Password</string>
+			<string>ENTER_PSW_LABEL</string>
 		</dict>
 		<dict>
 			<key>set</key>
@@ -42,7 +42,7 @@
 			<key>get</key>
 			<string>getValueForSpecifier:</string>
 			<key>label</key>
-			<string>Password</string>
+			<string>PASSWORD</string>
 			<key>PostNotification</key>
 			<string>com.pugliagianluca.FMFNotifier.settingsChanged</string>
 			<key>defaults</key>
@@ -66,7 +66,7 @@
 			<key>cell</key>
 			<string>PSButtonCell</string>
 			<key>label</key>
-			<string>Visit WebSite.com</string>
+			<string>VISIT_WEBSITE</string>
 		</dict>
 		<dict>
 			<key>action</key>
@@ -74,7 +74,7 @@
 			<key>cell</key>
 			<string>PSButtonCell</string>
 			<key>label</key>
-			<string>Make Donation</string>
+			<string>DONATION</string>
 		</dict>
 		<dict>
 			<key>footerText</key>
