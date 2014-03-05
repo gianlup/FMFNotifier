@@ -18,50 +18,50 @@
 
 @implementation FMFNotifierBundleController
 
-- (id)getValueForSpecifier:(PSSpecifier*)specifier {
-    NSLog(@"[FMFNotifierBundleController] - getValueForSpecifier");
-    
-	id value = nil;
-    NSDictionary *specifierProperties = [specifier properties];
-    NSString *specifierKey = [specifierProperties objectForKey:kPrefs_Key];
-    NSString *plistPath = [[NSString alloc] initWithString:[specifierProperties objectForKey:kPrefs_Defaults]];
-    plistPath = [NSString stringWithFormat:@"%@/%@.plist", kPrefs_Path, plistPath];
-    if (plistPath) {
-        if (![[NSFileManager defaultManager] fileExistsAtPath:plistPath]) {
-            return value;
-        }
-        //NSDictionary *dict = [[NSDictionary alloc] initWithContentsOfFile:plistPath];
-        //id objectValue = [dict objectForKey:specifierKey];
-        //        if (password) {
-        //            value = [NSString stringWithFormat:@"%@", objectValue];
-        //            NSLog(@"read key '%@' with value '%@' from plist '%@'", specifierKey, value, plistPath);
-        //        }
-        //        else {
-        //            NSLog(@"key '%@' not found in plist '%@'", specifierKey, plistPath);
-        //
-    }
-	return nil;
-}
+//- (id)getValueForSpecifier:(PSSpecifier*)specifier {
+//    NSLog(@"[FMFNotifierBundleController] - getValueForSpecifier");
+//    
+//	id value = nil;
+//    NSDictionary *specifierProperties = [specifier properties];
+//    NSString *specifierKey = [specifierProperties objectForKey:kPrefs_Key];
+//    NSString *plistPath = [[NSString alloc] initWithString:[specifierProperties objectForKey:kPrefs_Defaults]];
+//    plistPath = [NSString stringWithFormat:@"%@/%@.plist", kPrefs_Path, plistPath];
+//    if (plistPath) {
+//        if (![[NSFileManager defaultManager] fileExistsAtPath:plistPath]) {
+//            return value;
+//        }
+//        NSDictionary *dict = [[NSDictionary alloc] initWithContentsOfFile:plistPath];
+//        id objectValue = [dict objectForKey:specifierKey];
+//        if (objectValue) {
+//            value = [NSString stringWithFormat:@"%@", objectValue];
+//            NSLog(@"read key '%@' with value '%@' from plist '%@'", specifierKey, value, plistPath);
+//        }
+//        else {
+//            NSLog(@"key '%@' not found in plist '%@'", specifierKey, plistPath);
+//        }
+//    }
+//	return nil;
+//}
 
-- (void)setValue:(id)value forSpecifier:(PSSpecifier*)specifier {
-    NSLog(@"[FMFNotifierBundleController] - setValue:forSpecifier");
-    
-	NSDictionary *specifierProperties = [specifier properties];
-    NSString *specifierKey = [specifierProperties objectForKey:kPrefs_Key];
-    NSString *plistPath = [[NSString alloc] initWithString:[specifierProperties objectForKey:kPrefs_Defaults]];
-    plistPath = [NSString stringWithFormat:@"%@/%@.plist", kPrefs_Path, plistPath];
-    if (plistPath) {
-        if (![[NSFileManager defaultManager] fileExistsAtPath:plistPath]) {
-            return;
-        }
-        //NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithContentsOfFile:plistPath];
-        //[dict setObject:value forKey:specifierKey];
-        //[dict writeToFile:plistPath atomically:YES];
-        NSLog(@"saved key '%@' with value '%@' to plist '%@'", specifierKey, value, plistPath);
-        return;
-    }
-    return;
-}
+//- (void)setValue:(id)value forSpecifier:(PSSpecifier*)specifier {
+//    NSLog(@"[FMFNotifierBundleController] - setValue:forSpecifier");
+//    
+//	NSDictionary *specifierProperties = [specifier properties];
+//    NSString *specifierKey = [specifierProperties objectForKey:kPrefs_Key];
+//    NSString *plistPath = [[NSString alloc] initWithString:[specifierProperties objectForKey:kPrefs_Defaults]];
+//    plistPath = [NSString stringWithFormat:@"%@/%@.plist", kPrefs_Path, plistPath];
+//    if (plistPath) {
+//        if (![[NSFileManager defaultManager] fileExistsAtPath:plistPath]) {
+//            return;
+//        }
+//        NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithContentsOfFile:plistPath];
+//        [dict setObject:value forKey:specifierKey];
+//        [dict writeToFile:plistPath atomically:YES];
+//        NSLog(@"saved key '%@' with value '%@' to plist '%@'", specifierKey, value, plistPath);
+//        return;
+//    }
+//    return;
+//}
 
 - (void)followOnTwitter:(PSSpecifier*)specifier {
 	[[UIApplication sharedApplication] openURL:[NSURL URLWithString:kUrl_FollowOnTwitter]];
@@ -73,7 +73,7 @@
 
 - (id)specifiers {
     if(_specifiers == nil) {
-        _specifiers = [[self loadSpecifiersFromPlistName:@"FMFNotifier" target:self] retain];
+        _specifiers = [self loadSpecifiersFromPlistName:@"FMFNotifier" target:self];
     }
     return _specifiers;
 }

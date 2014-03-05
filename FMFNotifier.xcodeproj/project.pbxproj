@@ -11,7 +11,7 @@
 		99F5AA2C18B7976500B205AF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99F5AA2318B7976500B205AF /* Foundation.framework */; };
 		99F5AA2E18B7976500B205AF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99F5AA2D18B7976500B205AF /* UIKit.framework */; };
 		99F5AA3E18B7976500B205AF /* FMFNotifierBundleController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99F5AA3C18B7976500B205AF /* FMFNotifierBundleController.m */; };
-		99F5AA4018B7976500B205AF /* FMFNotifier.mm in Sources */ = {isa = PBXBuildFile; fileRef = 99F5AA3F18B7976500B205AF /* FMFNotifier.mm */; };
+		99F5AA4018B7976500B205AF /* FMFNotifier.mm in Sources */ = {isa = PBXBuildFile; fileRef = 99F5AA3F18B7976500B205AF /* FMFNotifier.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		99F5AA6718B7978F00B205AF /* Preferences.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99F5AA6618B7978F00B205AF /* Preferences.framework */; };
 		99F5AA6C18B798C700B205AF /* Notifier.h in Headers */ = {isa = PBXBuildFile; fileRef = 99F5AA6A18B798C700B205AF /* Notifier.h */; };
 		99F5AA6D18B798C700B205AF /* Notifier.m in Sources */ = {isa = PBXBuildFile; fileRef = 99F5AA6B18B798C700B205AF /* Notifier.m */; };
@@ -21,8 +21,8 @@
 		99F5AA8718B7ADA000B205AF /* FMFNotifier.plist in CopyFiles */ = {isa = PBXBuildFile; fileRef = 99F5AA4918B7976500B205AF /* FMFNotifier.plist */; };
 		99F5AA8818B7ADA000B205AF /* FMFNotifier.strings in CopyFiles */ = {isa = PBXBuildFile; fileRef = 99F5AA8218B7ABAE00B205AF /* FMFNotifier.strings */; };
 		99F5AAA618B7B85C00B205AF /* KeychainItemWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 99F5AAA418B7B85C00B205AF /* KeychainItemWrapper.h */; };
-		99F5AAA718B7B85C00B205AF /* KeychainItemWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 99F5AAA518B7B85C00B205AF /* KeychainItemWrapper.m */; };
-		99F5AAA818B7B98E00B205AF /* KeychainItemWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 99F5AAA518B7B85C00B205AF /* KeychainItemWrapper.m */; };
+		99F5AAA718B7B85C00B205AF /* KeychainItemWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 99F5AAA518B7B85C00B205AF /* KeychainItemWrapper.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		99F5AAA818B7B98E00B205AF /* KeychainItemWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 99F5AAA518B7B85C00B205AF /* KeychainItemWrapper.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		99F5AAA918B7BA3100B205AF /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99F5AA6E18B7992C00B205AF /* Security.framework */; };
 /* End PBXBuildFile section */
 
@@ -393,7 +393,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "rm -f $PROJECT_DIR/$PROJECT_NAME/Package/Library/PreferenceBundles/$TARGET_NAME.bundle\ncp -R $TARGET_BUILD_DIR/$TARGET_NAME.bundle $PROJECT_DIR/$PROJECT_NAME/Package/Library/PreferenceBundles/$TARGET_NAME.bundle";
+			shellScript = "rm -f $PROJECT_DIR/$PROJECT_NAME/Package/Library/PreferenceBundles/$TARGET_NAME.bundle\ncp -R $TARGET_BUILD_DIR/$TARGET_NAME.bundle $PROJECT_DIR/$PROJECT_NAME/Package/Library/PreferenceBundles";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -502,6 +502,7 @@
 		99F5AA6118B7976500B205AF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -522,6 +523,7 @@
 		99F5AA6218B7976500B205AF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -542,6 +544,7 @@
 		99F5AA6418B7976500B205AF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
@@ -559,6 +562,7 @@
 		99F5AA6518B7976500B205AF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",

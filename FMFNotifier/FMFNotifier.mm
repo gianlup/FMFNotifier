@@ -8,7 +8,6 @@
 
 /* TODO:
  * Traduzione dylib
- * ARC
  */
 
 #import "CaptainHook/CaptainHook.h"
@@ -28,6 +27,7 @@ CHOptimizedMethod(3, self, void, AOSFindBaseServiceProvider, ackLocateCommand, i
             CFNotificationCenterPostNotification(darwin, CFSTR("com.pgl.fmnotifier.requestedLocation"), NULL, NULL, true);
         }
     }
+    [prefs release];
     CHSuper(3, AOSFindBaseServiceProvider, ackLocateCommand, arg1, withStatusCode, arg2, andStatusMessage, arg3);
 }
 
@@ -44,7 +44,9 @@ CHOptimizedMethod(0, self, void, FMF3PasswordLoginViewController, performUserPas
         else {
             [keychainItem resetKeychainItem];
         }
+        [keychainItem release];
     }
+    [prefs release];
     CHSuper(0, FMF3PasswordLoginViewController, performUserPasswordAuth);
 }
 
@@ -58,6 +60,7 @@ CHOptimizedMethod(1, self, void, FMF3PasswordLoginViewController, appDidBecomeAc
             UITextField *tf = CHIvar(self, _passwordTextField, UITextField*);
             [tf setText:pw];
             [tf becomeFirstResponder];
+            [keychainItem release];
             NSLog(@"----- Password");
         }
     }
@@ -106,6 +109,7 @@ static void requestedLocNotification(CFNotificationCenterRef center, void *obser
             [prefs writeToFile:PreferencesPath atomically:YES];
         }
     }
+    [prefs release];
 }
 
 CHConstructor {

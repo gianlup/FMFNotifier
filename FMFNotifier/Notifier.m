@@ -28,7 +28,7 @@ static Notifier *controller = nil;
 	[request setMessage:message];
 	[request setSectionID:bundleID];
     SystemSoundID sound;
-    AudioServicesCreateSystemSoundID((CFURLRef)[NSURL fileURLWithPath:@"/System/Library/Audio/UISounds/shake.caf" isDirectory:NO], &sound);
+    AudioServicesCreateSystemSoundID((__bridge CFURLRef)[NSURL fileURLWithPath:@"/System/Library/Audio/UISounds/shake.caf" isDirectory:NO], &sound);
     if(sound) {
         [request setSound:[objc_getClass("BBSound") alertSoundWithSystemSoundID:sound]];
     }
