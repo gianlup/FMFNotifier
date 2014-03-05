@@ -7,6 +7,8 @@
 	<key>items</key>
 	<array>
 		<dict>
+			<key>footerText</key>
+			<string>FOOTER</string>
 			<key>cell</key>
 			<string>PSGroupCell</string>
 			<key>isStaticText</key>
@@ -20,7 +22,7 @@
 			<key>default</key>
 			<true/>
 			<key>key</key>
-			<string>enabledSwitch</string>
+			<string>NotificationEnabled</string>
 			<key>label</key>
 			<string>ENABLED</string>
 			<key>PostNotification</key>
@@ -30,27 +32,17 @@
 		</dict>
 		<dict>
 			<key>cell</key>
-			<string>PSGroupCell</string>
-			<key>isStaticText</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
 			<true/>
+			<key>key</key>
+			<string>rememberPassword</string>
 			<key>label</key>
-			<string>ENTER_PSW_LABEL</string>
-		</dict>
-		<dict>
-			<key>set</key>
-			<string>setValue:forSpecifier:</string>
-			<key>get</key>
-			<string>getValueForSpecifier:</string>
-			<key>label</key>
-			<string>PASSWORD</string>
+			<string>REMEMBER_PW</string>
 			<key>PostNotification</key>
 			<string>com.pugliagianluca.FMFNotifier.settingsChanged</string>
 			<key>defaults</key>
 			<string>com.pugliagianluca.FMFNotifier</string>
-			<key>key</key>
-			<string>password</string>
-			<key>cell</key>
-			<string>PSSecureEditTextCell</string>
 		</dict>
 		<dict>
 			<key>cell</key>
@@ -59,14 +51,6 @@
 			<true/>
 			<key>label</key>
 			<string></string>
-		</dict>
-		<dict>
-			<key>action</key>
-			<string>visitWebSite:</string>
-			<key>cell</key>
-			<string>PSButtonCell</string>
-			<key>label</key>
-			<string>VISIT_WEBSITE</string>
 		</dict>
 		<dict>
 			<key>action</key>

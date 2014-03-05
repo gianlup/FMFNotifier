@@ -6,8 +6,9 @@
 
 */
 
-"ENABLED" = "Attivo";
+"ENABLED" = "Notifiche Attive";
 "ENTER_PSW_LABEL" = "Inserisci Password";
 "PASSWORD" = "Password";
-"VISIT_WEBSITE" = "Visita Sito Web";
 "DONATION" = "Donazione";
+"REMEMBER_PW" = "Ricorda Password";
+"FOOTER" = "La password viene aggiornata e salvata in modo sicuro ad ogni login.";

@@ -7,7 +7,6 @@
 //
 
 /* TODO:
- * Rendere sicura password
  * Traduzione dylib
  * Non resettare le pref ad ogni installazione
  */
@@ -21,38 +20,49 @@ CHDeclareClass(AOSFindBaseServiceProvider);
 CHDeclareClass(FMF3PasswordLoginViewController);
 
 CHOptimizedMethod(3, self, void, AOSFindBaseServiceProvider, ackLocateCommand, id, arg1, withStatusCode, int, arg2, andStatusMessage, id, arg3) {
-    //NSLog(@"FMF: ackLocateCommand:withStatusCode:andStatusMessage");
-    CFNotificationCenterRef darwin = CFNotificationCenterGetDarwinNotifyCenter();
-    CFNotificationCenterPostNotification(darwin, CFSTR("com.pgl.fmnotifier.requestedLocation"), NULL, NULL, true);
+    NSMutableDictionary *prefs = [[NSMutableDictionary alloc] initWithContentsOfFile:PreferencesPath];
+    if (prefs) {
+        NSNumber *nE = [prefs objectForKey:@"NotificationEnabled"];
+        if ([nE boolValue]) {
+            CFNotificationCenterRef darwin = CFNotificationCenterGetDarwinNotifyCenter();
+            CFNotificationCenterPostNotification(darwin, CFSTR("com.pgl.fmnotifier.requestedLocation"), NULL, NULL, true);
+        }
+    }
     CHSuper(3, AOSFindBaseServiceProvider, ackLocateCommand, arg1, withStatusCode, arg2, andStatusMessage, arg3);
 }
 
-CHOptimizedMethod(1, self, void, FMF3PasswordLoginViewController, appDidBecomeActive, id, arg1) {
-    CFNotificationCenterRef darwin = CFNotificationCenterGetDarwinNotifyCenter();
-    CFNotificationCenterPostNotification(darwin, CFSTR("com.pgl.fmnotifier.pw"), NULL, NULL, true);
-    
-    UITextField *tf = CHIvar(self, _passwordTextField, UITextField*);
-    while (1) {
-        NSMutableDictionary *prefs=[NSMutableDictionary dictionaryWithContentsOfFile:PreferencesPath];
-        if (prefs) {
-            if ([prefs objectForKey:@"password"]) {
-                NSLog(@"---pw--- %@",[prefs objectForKey:@"password"]);
-                [tf setText:[prefs objectForKey:@"password"]];
-                [tf becomeFirstResponder];
-                [prefs removeObjectForKey:@"password"];
-                [prefs writeToFile:PreferencesPath atomically:YES];
-                break;
-            }
+CHOptimizedMethod(0, self, void, FMF3PasswordLoginViewController, performUserPasswordAuth) {
+    NSMutableDictionary *prefs = [[NSMutableDictionary alloc] initWithContentsOfFile:PreferencesPath];
+    if (prefs) {
+        NSNumber *rP = [prefs objectForKey:@"rememberPassword"];
+        KeychainItemWrapper *keychainItem = [[KeychainItemWrapper alloc] initWithIdentifier:@"FMFNotifier" accessGroup:nil];
+        if ([rP boolValue]) {
+            UITextField *tf = CHIvar(self, _passwordTextField, UITextField*);
+            [keychainItem setObject:tf.text forKey:(__bridge id)kSecValueData];
+            NSLog(@"----- Saved %@",tf.text);
         }
-        usleep(1000);
+        else {
+            [keychainItem resetKeychainItem];
+        }
+    }
+    CHSuper(0, FMF3PasswordLoginViewController, performUserPasswordAuth);
+}
+
+CHOptimizedMethod(1, self, void, FMF3PasswordLoginViewController, appDidBecomeActive, id, arg1) {
+    NSMutableDictionary *prefs = [[NSMutableDictionary alloc] initWithContentsOfFile:PreferencesPath];
+    if (prefs) {
+        NSNumber *rP = [prefs objectForKey:@"rememberPassword"];
+        if ([rP boolValue]) {
+            KeychainItemWrapper *keychainItem = [[KeychainItemWrapper alloc] initWithIdentifier:@"FMFNotifier" accessGroup:nil];
+            NSString *pw = [keychainItem objectForKey:(__bridge id)kSecValueData];
+            UITextField *tf = CHIvar(self, _passwordTextField, UITextField*);
+            [tf setText:pw];
+            [tf becomeFirstResponder];
+            NSLog(@"----- Password %@",pw);
+        }
     }
     CHSuper(1, FMF3PasswordLoginViewController, appDidBecomeActive, arg1);
 }
-
-//CHOptimizedMethod(3, self, void, BBServer, publishBulletinRequest, id, arg1, destinations, unsigned int, arg2, alwaysToLockScreen, BOOL, arg3) {
-//    NSLog(@"!!! publishBulletinRequest: destinations:%u lock:%i",arg2,arg3);
-//    CHSuper(3, BBServer, publishBulletinRequest, arg1, destinations, arg2, alwaysToLockScreen, arg3);
-//}
 
 static BBServer *BulletinBoardServer;
 
@@ -68,8 +78,11 @@ CHOptimizedMethod(0, self, id, BBServer, init) {
     return self;
 }
 
-static void requestedLocationNotification(CFNotificationCenterRef center, void *observer, CFStringRef name, const void *object, CFDictionaryRef userInfo) {
+static void requestedLocNotification(CFNotificationCenterRef center, void *observer, CFStringRef name, const void *object, CFDictionaryRef userInfo) {
     NSLog(@"------ requestedLocationNotification");
+    if (!objc_getClass("SBAlertItemsController")) {
+        return;
+    }
     NSMutableDictionary *prefs = [[NSMutableDictionary alloc] initWithContentsOfFile:PreferencesPath];
     if (prefs) {
         NSDate *oldDate = [prefs objectForKey:@"lastDateFMAlertItem"];
@@ -114,16 +127,16 @@ CHConstructor {
         CHLoadLateClass(BBServer);
         CHHook(0, BBServer, init);
         CHHook(0, BBServer, sharedServer);
-//      CHHook(3, BBServer, publishBulletinRequest, destinations, alwaysToLockScreen);
         
 		CHLoadLateClass(AOSFindBaseServiceProvider);
         CHHook(3, AOSFindBaseServiceProvider, ackLocateCommand, withStatusCode, andStatusMessage);
         
         CHLoadLateClass(FMF3PasswordLoginViewController);
         CHHook(1, FMF3PasswordLoginViewController, appDidBecomeActive);
+        CHHook(0, FMF3PasswordLoginViewController, performUserPasswordAuth);
         
         CFNotificationCenterRef darwin = CFNotificationCenterGetDarwinNotifyCenter();
-		CFNotificationCenterAddObserver(darwin, NULL, requestedLocationNotification, CFSTR("com.pgl.fmnotifier.requestedLocation"), NULL, CFNotificationSuspensionBehaviorCoalesce);
+		CFNotificationCenterAddObserver(darwin, NULL, requestedLocNotification, CFSTR("com.pgl.fmnotifier.requestedLocation"), NULL, CFNotificationSuspensionBehaviorCoalesce);
         CFNotificationCenterAddObserver(darwin, NULL, pwNotification, CFSTR("com.pgl.fmnotifier.pw"), NULL, CFNotificationSuspensionBehaviorCoalesce);
 	}
 }

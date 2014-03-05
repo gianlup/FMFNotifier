@@ -10,8 +10,7 @@
 #import <Preferences/PSSpecifier.h>
 #import "KeychainItemWrapper.h"
 
-#define kUrl_FollowOnTwitter @"https://twitter.com/kokoabim"
-#define kUrl_VisitWebSite @"http://iosopendev.com"
+#define kUrl_FollowOnTwitter @"https://twitter.com/0xpooky"
 #define kUrl_MakeDonation @"https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=56KLKJLXKM9FS"
 
 #define kPrefs_Path @"/var/mobile/Library/Preferences"
@@ -81,10 +80,6 @@
 
 - (void)followOnTwitter:(PSSpecifier*)specifier {
 	[[UIApplication sharedApplication] openURL:[NSURL URLWithString:kUrl_FollowOnTwitter]];
-}
-
-- (void)visitWebSite:(PSSpecifier*)specifier {
-	[[UIApplication sharedApplication] openURL:[NSURL URLWithString:kUrl_VisitWebSite]];
 }
 
 - (void)makeDonation:(PSSpecifier *)specifier {
