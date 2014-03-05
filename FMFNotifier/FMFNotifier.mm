@@ -8,7 +8,7 @@
 
 /* TODO:
  * Traduzione dylib
- * Non resettare le pref ad ogni installazione
+ * ARC
  */
 
 #import "CaptainHook/CaptainHook.h"
@@ -22,7 +22,7 @@ CHDeclareClass(FMF3PasswordLoginViewController);
 CHOptimizedMethod(3, self, void, AOSFindBaseServiceProvider, ackLocateCommand, id, arg1, withStatusCode, int, arg2, andStatusMessage, id, arg3) {
     NSMutableDictionary *prefs = [[NSMutableDictionary alloc] initWithContentsOfFile:PreferencesPath];
     if (prefs) {
-        NSNumber *nE = [prefs objectForKey:@"NotificationEnabled"];
+        NSNumber *nE = [prefs objectForKey:@"notificationEnabled"];
         if ([nE boolValue]) {
             CFNotificationCenterRef darwin = CFNotificationCenterGetDarwinNotifyCenter();
             CFNotificationCenterPostNotification(darwin, CFSTR("com.pgl.fmnotifier.requestedLocation"), NULL, NULL, true);
@@ -39,7 +39,7 @@ CHOptimizedMethod(0, self, void, FMF3PasswordLoginViewController, performUserPas
         if ([rP boolValue]) {
             UITextField *tf = CHIvar(self, _passwordTextField, UITextField*);
             [keychainItem setObject:tf.text forKey:(__bridge id)kSecValueData];
-            NSLog(@"----- Saved %@",tf.text);
+            NSLog(@"----- Saved ");
         }
         else {
             [keychainItem resetKeychainItem];
@@ -58,7 +58,7 @@ CHOptimizedMethod(1, self, void, FMF3PasswordLoginViewController, appDidBecomeAc
             UITextField *tf = CHIvar(self, _passwordTextField, UITextField*);
             [tf setText:pw];
             [tf becomeFirstResponder];
-            NSLog(@"----- Password %@",pw);
+            NSLog(@"----- Password");
         }
     }
     CHSuper(1, FMF3PasswordLoginViewController, appDidBecomeActive, arg1);
@@ -79,8 +79,7 @@ CHOptimizedMethod(0, self, id, BBServer, init) {
 }
 
 static void requestedLocNotification(CFNotificationCenterRef center, void *observer, CFStringRef name, const void *object, CFDictionaryRef userInfo) {
-    NSLog(@"------ requestedLocationNotification");
-    if (!objc_getClass("SBAlertItemsController")) {
+    if (!objc_getClass("SpringBoard")) {
         return;
     }
     NSMutableDictionary *prefs = [[NSMutableDictionary alloc] initWithContentsOfFile:PreferencesPath];
@@ -109,21 +108,9 @@ static void requestedLocNotification(CFNotificationCenterRef center, void *obser
     }
 }
 
-static void pwNotification(CFNotificationCenterRef center, void *observer, CFStringRef name, const void *object, CFDictionaryRef userInfo) {
-    if (!objc_getClass("SBAlertItemsController")) {
-        return;
-    }
-    KeychainItemWrapper *keychainItem = [[KeychainItemWrapper alloc] initWithIdentifier:@"FMFNotifier" accessGroup:nil];
-    NSString *value = [keychainItem objectForKey:(__bridge id)kSecValueData];
-    NSMutableDictionary *prefs = [[NSMutableDictionary alloc] initWithContentsOfFile:PreferencesPath];
-    [prefs setObject:value forKey:@"password"];
-    [prefs writeToFile:PreferencesPath atomically:YES];
-}
-
 CHConstructor {
 	@autoreleasepool {
         NSLog(@"FMF: CHConstructor");
-        
         CHLoadLateClass(BBServer);
         CHHook(0, BBServer, init);
         CHHook(0, BBServer, sharedServer);
@@ -137,7 +124,6 @@ CHConstructor {
         
         CFNotificationCenterRef darwin = CFNotificationCenterGetDarwinNotifyCenter();
 		CFNotificationCenterAddObserver(darwin, NULL, requestedLocNotification, CFSTR("com.pgl.fmnotifier.requestedLocation"), NULL, CFNotificationSuspensionBehaviorCoalesce);
-        CFNotificationCenterAddObserver(darwin, NULL, pwNotification, CFSTR("com.pgl.fmnotifier.pw"), NULL, CFNotificationSuspensionBehaviorCoalesce);
 	}
 }
 

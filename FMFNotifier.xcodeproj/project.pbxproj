@@ -69,7 +69,6 @@
 		99F5AA4918B7976500B205AF /* FMFNotifier.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = FMFNotifier.plist; path = Bundle/FMFNotifier.plist; sourceTree = "<group>"; };
 		99F5AA4E18B7976500B205AF /* FMFNotifier.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = FMFNotifier.plist; path = Package/Library/PreferenceLoader/Preferences/FMFNotifier.plist; sourceTree = "<group>"; };
 		99F5AA5218B7976500B205AF /* FMFNotifier.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = FMFNotifier.plist; path = Package/Library/MobileSubstrate/DynamicLibraries/FMFNotifier.plist; sourceTree = "<group>"; };
-		99F5AA5B18B7976500B205AF /* com.pugliagianluca.FMFNotifier.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = com.pugliagianluca.FMFNotifier.plist; path = Package/var/mobile/Library/Preferences/com.pugliagianluca.FMFNotifier.plist; sourceTree = "<group>"; };
 		99F5AA5D18B7976500B205AF /* FMFNotifier-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FMFNotifier-Prefix.pch"; sourceTree = "<group>"; };
 		99F5AA6618B7978F00B205AF /* Preferences.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Preferences.framework; path = System/Library/PrivateFrameworks/Preferences.framework; sourceTree = SDKROOT; };
 		99F5AA6A18B798C700B205AF /* Notifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Notifier.h; sourceTree = "<group>"; };
@@ -267,7 +266,6 @@
 		99F5AA5A18B7976500B205AF /* Preferences */ = {
 			isa = PBXGroup;
 			children = (
-				99F5AA5B18B7976500B205AF /* com.pugliagianluca.FMFNotifier.plist */,
 			);
 			name = Preferences;
 			sourceTree = "<group>";
@@ -395,7 +393,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "rm -f $PROJECT_DIR/$PROJECT_NAME/Package/Library/PreferenceBundles/$TARGET_NAME.bundle\ncp -r $TARGET_BUILD_DIR/$TARGET_NAME.bundle $PROJECT_DIR/$PROJECT_NAME/Package/Library/PreferenceBundles";
+			shellScript = "rm -f $PROJECT_DIR/$PROJECT_NAME/Package/Library/PreferenceBundles/$TARGET_NAME.bundle\ncp -R $TARGET_BUILD_DIR/$TARGET_NAME.bundle $PROJECT_DIR/$PROJECT_NAME/Package/Library/PreferenceBundles/$TARGET_NAME.bundle";
 		};
 /* End PBXShellScriptBuildPhase section */
 

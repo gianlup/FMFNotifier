@@ -22,7 +22,7 @@
 			<key>default</key>
 			<true/>
 			<key>key</key>
-			<string>NotificationEnabled</string>
+			<string>notificationEnabled</string>
 			<key>label</key>
 			<string>ENABLED</string>
 			<key>PostNotification</key>
