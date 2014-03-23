@@ -14,8 +14,8 @@
     
 }
 
-//- (id)getValueForSpecifier:(PSSpecifier*)specifier;
-//- (void)setValue:(id)value forSpecifier:(PSSpecifier*)specifier;
+- (id)getValueForSpecifier:(PSSpecifier*)specifier;
+- (void)setValue:(id)value forSpecifier:(PSSpecifier*)specifier;
 
 - (void)followOnTwitter:(PSSpecifier*)specifier;
 - (void)makeDonation:(PSSpecifier*)specifier;

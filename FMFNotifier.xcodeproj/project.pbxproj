@@ -22,7 +22,6 @@
 		99F5AA8818B7ADA000B205AF /* FMFNotifier.strings in CopyFiles */ = {isa = PBXBuildFile; fileRef = 99F5AA8218B7ABAE00B205AF /* FMFNotifier.strings */; };
 		99F5AAA618B7B85C00B205AF /* KeychainItemWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 99F5AAA418B7B85C00B205AF /* KeychainItemWrapper.h */; };
 		99F5AAA718B7B85C00B205AF /* KeychainItemWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 99F5AAA518B7B85C00B205AF /* KeychainItemWrapper.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		99F5AAA818B7B98E00B205AF /* KeychainItemWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 99F5AAA518B7B85C00B205AF /* KeychainItemWrapper.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		99F5AAA918B7BA3100B205AF /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99F5AA6E18B7992C00B205AF /* Security.framework */; };
 /* End PBXBuildFile section */
 
@@ -337,7 +336,7 @@
 		99F5AA1718B7976500B205AF /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0510;
 			};
 			buildConfigurationList = 99F5AA1A18B7976500B205AF /* Build configuration list for PBXProject "FMFNotifier" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -393,7 +392,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "rm -f $PROJECT_DIR/$PROJECT_NAME/Package/Library/PreferenceBundles/$TARGET_NAME.bundle\ncp -R $TARGET_BUILD_DIR/$TARGET_NAME.bundle $PROJECT_DIR/$PROJECT_NAME/Package/Library/PreferenceBundles";
+			shellScript = "rm -f \"$PROJECT_DIR/$PROJECT_NAME/Package/Library/PreferenceBundles/$TARGET_NAME.bundle\"\ncp -R \"$TARGET_BUILD_DIR/$TARGET_NAME.bundle\" \"$PROJECT_DIR/$PROJECT_NAME/Package/Library/PreferenceBundles\"";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -412,7 +411,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				99F5AAA818B7B98E00B205AF /* KeychainItemWrapper.m in Sources */,
 				99F5AA3E18B7976500B205AF /* FMFNotifierBundleController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -444,7 +442,6 @@
 		99F5AA5E18B7976500B205AF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_ENABLE_MODULES = YES;
 				COPY_PHASE_STRIP = NO;
 				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "*.nib *.lproj *.gch (*) .DS_Store CVS .svn .git .hg *.xcodeproj *.xcode *.pbproj *.pbxproj";
@@ -477,7 +474,6 @@
 		99F5AA5F18B7976500B205AF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_ENABLE_MODULES = YES;
 				COPY_PHASE_STRIP = YES;
 				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "*.nib *.lproj *.gch (*) .DS_Store CVS .svn .git .hg *.xcodeproj *.xcode *.pbproj *.pbxproj";

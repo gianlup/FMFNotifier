@@ -8,7 +8,7 @@
 	<array>
 		<dict>
 			<key>footerText</key>
-			<string>FOOTER</string>
+			<string>FOOTER1</string>
 			<key>cell</key>
 			<string>PSGroupCell</string>
 			<key>isStaticText</key>
@@ -29,6 +29,36 @@
 			<string>com.pugliagianluca.FMFNotifier.settingsChanged</string>
 			<key>defaults</key>
 			<string>com.pugliagianluca.FMFNotifier</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSliderCell</string>
+			<key>min</key>
+			<integer>30</integer>
+			<key>max</key>
+			<integer>200</integer>
+			<key>key</key>
+			<string>minInterval</string>
+			<key>get</key>
+			<string>getValueForSpecifier:</string>
+			<key>set</key>
+			<string>setValue:forSpecifier:</string>
+			<key>showValue</key>
+			<true/>
+			<key>PostNotification</key>
+			<string>com.pugliagianluca.FMFNotifier.settingsChanged</string>
+			<key>defaults</key>
+			<string>com.pugliagianluca.FMFNotifier</string>
+		</dict>
+		<dict>
+			<key>footerText</key>
+			<string>FOOTER2</string>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>isStaticText</key>
+			<true/>
+			<key>label</key>
+			<string></string>
 		</dict>
 		<dict>
 			<key>cell</key>
@@ -63,6 +93,8 @@
 		<dict>
 			<key>footerText</key>
 			<string>© 2014 Puglia Gianluca</string>
+			<key>alignment</key>
+			<integer>1</integer>
 			<key>cell</key>
 			<string>PSGroupCell</string>
 			<key>isStaticText</key>

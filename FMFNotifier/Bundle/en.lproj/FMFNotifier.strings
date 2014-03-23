@@ -11,4 +11,5 @@
 "PASSWORD" = "Password";
 "DONATION" = "Make a Donation";
 "REMEMBER_PW" = "Remember Password";
-"FOOTER" = "The password is updated and stored securely at each login.";
+"FOOTER1" = "The password is updated and stored securely at each login.";
+"FOOTER2" = "The password is updated and stored securely at each login.";

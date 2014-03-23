@@ -11,4 +11,5 @@
 "PASSWORD" = "Password";
 "DONATION" = "Donazione";
 "REMEMBER_PW" = "Ricorda Password";
-"FOOTER" = "La password viene aggiornata e salvata in modo sicuro ad ogni login.";
+"FOOTER1" = "Minimum interval (in seconds) at which notifications will appear.";
+"FOOTER2" = "La password viene aggiornata e salvata in modo sicuro ad ogni login.";

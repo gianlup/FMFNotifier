@@ -64,6 +64,7 @@ CHOptimizedMethod(1, self, void, FMF3PasswordLoginViewController, appDidBecomeAc
             NSLog(@"----- Password");
         }
     }
+    [prefs release];
     CHSuper(1, FMF3PasswordLoginViewController, appDidBecomeActive, arg1);
 }
 
@@ -99,7 +100,8 @@ static void requestedLocNotification(CFNotificationCenterRef center, void *obser
             [prefs writeToFile:PreferencesPath atomically:YES];
         }
         NSTimeInterval ti = [actualDate timeIntervalSinceDate:oldDate];
-        if (ti >= 60) {
+        NSTimeInterval minTi = [[prefs objectForKey:@"minInterval"] floatValue];
+        if (ti >= minTi) {
             Notifier *notifier = [Notifier sharedInstance];
             [notifier showNotificationWithTitle:@"FMFNotifier"
                                         message:@"Someone has requested your location through the app Find My Friends."
