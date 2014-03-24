@@ -10,7 +10,7 @@
 #import <Preferences/PSSpecifier.h>
 
 #define kUrl_MakeDonation @"https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=A9SZH59ARLTLA&lc=IT&item_name=FMFNotifier&currency_code=EUR&bn=PP%2dDonationsBF%3abtn_donate_SM%2egif%3aNonHosted"
-#define kUrl_MakeEmail @"￼mailto:?"
+#define kUrl_MakeEmail @"mailto:gianluca.puglia@gmail.com?subject=FMFNotifier"
 
 #define kPrefs_Path @"/var/mobile/Library/Preferences"
 #define kPrefs_Key @"key"
