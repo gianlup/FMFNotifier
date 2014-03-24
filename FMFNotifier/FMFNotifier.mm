@@ -6,10 +6,6 @@
 //  Copyright (c) 2014 __MyCompanyName__. All rights reserved.
 //
 
-/* TODO:
- * dylib traslations
- */
-
 #import "CaptainHook/CaptainHook.h"
 #import "KeychainItemWrapper.h"
 #import "Notifier.h"

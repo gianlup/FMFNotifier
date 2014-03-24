@@ -1,6 +1,6 @@
 Package: com.pugliagianluca.FMFNotifier
 Name: FMFNotifier
-Version: 1.0-1
+Version: 1.0
 Description: Tweak that improves Find My Friends app.
 Section: Tweaks
 Depends: firmware (>= 5.0), mobilesubstrate

@@ -112,7 +112,7 @@
 		</dict>
 		<dict>
 			<key>footerText</key>
-			<string>FMFNotifier 1.0 - © 2014 Puglia Gianluca</string>
+			<string>FMFNotifier 1.0 - 2014 © Puglia Gianluca</string>
 			<key>alignment</key>
 			<integer>1</integer>
 			<key>cell</key>
