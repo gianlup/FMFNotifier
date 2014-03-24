@@ -6,10 +6,14 @@
 
 */
 
-"ENABLED" = "Notifiche Attive";
-"ENTER_PSW_LABEL" = "Inserisci Password";
+"ENABLED" = "Notifiche";
 "PASSWORD" = "Password";
-"DONATION" = "Donazione";
+"DONATE" = "Donazione";
+"PAYPAL" = "PayPal";
+"EMAIL" = "Email";
+"SUPPORT" = "Supporto";
 "REMEMBER_PW" = "Ricorda Password";
 "FOOTER1" = "Intervallo minimo (in secondi) con cui appariranno le notifiche.";
 "FOOTER2" = "La password viene aggiornata e salvata in modo sicuro ad ogni login.";
+"FOOTER3" = "Se vuoi fare una donazione per sostenermi, puoi farlo con PayPal.";
+"FOOTER4" = "Se hai bisogno di supporto, puoi mandarmi una Email.";

@@ -77,10 +77,12 @@
 		<dict>
 			<key>cell</key>
 			<string>PSGroupCell</string>
+			<key>footerText</key>
+			<string>FOOTER3</string>
 			<key>isStaticText</key>
 			<true/>
 			<key>label</key>
-			<string></string>
+			<string>DONATE</string>
 		</dict>
 		<dict>
 			<key>action</key>
@@ -88,11 +90,29 @@
 			<key>cell</key>
 			<string>PSButtonCell</string>
 			<key>label</key>
-			<string>DONATION</string>
+			<string>PAYPAL</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>footerText</key>
+			<string>FOOTER4</string>
+			<key>isStaticText</key>
+			<true/>
+			<key>label</key>
+			<string>SUPPORT</string>
+		</dict>
+		<dict>
+			<key>action</key>
+			<string>makeEmail:</string>
+			<key>cell</key>
+			<string>PSButtonCell</string>
+			<key>label</key>
+			<string>EMAIL</string>
 		</dict>
 		<dict>
 			<key>footerText</key>
-			<string>© 2014 Puglia Gianluca</string>
+			<string>FMFNotifier 1.0 - © 2014 Puglia Gianluca</string>
 			<key>alignment</key>
 			<integer>1</integer>
 			<key>cell</key>

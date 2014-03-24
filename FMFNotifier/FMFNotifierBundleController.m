@@ -9,8 +9,8 @@
 #import "FMFNotifierBundleController.h"
 #import <Preferences/PSSpecifier.h>
 
-#define kUrl_FollowOnTwitter @"https://twitter.com/0xpooky"
 #define kUrl_MakeDonation @"https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=A9SZH59ARLTLA&lc=IT&item_name=FMFNotifier&currency_code=EUR&bn=PP%2dDonationsBF%3abtn_donate_SM%2egif%3aNonHosted"
+#define kUrl_MakeEmail @"￼mailto:?"
 
 #define kPrefs_Path @"/var/mobile/Library/Preferences"
 #define kPrefs_Key @"key"
@@ -63,8 +63,8 @@
     return;
 }
 
-- (void)followOnTwitter:(PSSpecifier*)specifier {
-	[[UIApplication sharedApplication] openURL:[NSURL URLWithString:kUrl_FollowOnTwitter]];
+- (void)makeEmail:(PSSpecifier*)specifier {
+	[[UIApplication sharedApplication] openURL:[NSURL URLWithString:kUrl_MakeEmail]];
 }
 
 - (void)makeDonation:(PSSpecifier *)specifier {
@@ -86,8 +86,16 @@
             [prefs setObject:[NSNumber numberWithBool:YES] forKey:@"rememberPassword"];
             [prefs setObject:[NSNumber numberWithBool:YES] forKey:@"notificationEnabled"];
             [prefs setObject:[NSNumber numberWithFloat:60.0] forKey:@"minInterval"];
+            [prefs setObject:@"Someone has requested your location through Find My Friends app." forKey:@"en"];
+            [prefs setObject:@"Qualcuno ha richiesto la tua posizione attraverso l'app Trova Amici." forKey:@"it"];
             [prefs writeToFile:PreferencesPath atomically:YES];
         }
+//        else {
+//            NSMutableDictionary *prefs = [NSMutableDictionary dictionaryWithContentsOfFile:PreferencesPath];
+//            [prefs setObject:@"Someone has requested your location through Find My Friends app." forKey:@"en"];
+//            [prefs setObject:@"Qualcuno ha richiesto la tua posizione attraverso l'app Trova Amici." forKey:@"it"];
+//            [prefs writeToFile:PreferencesPath atomically:YES];
+//        }
 	}
 	return self;
 }

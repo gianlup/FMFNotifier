@@ -7,7 +7,7 @@
 //
 
 /* TODO:
- * Traduzione dylib
+ * dylib traslations
  */
 
 #import "CaptainHook/CaptainHook.h"
@@ -26,8 +26,8 @@ CHOptimizedMethod(3, self, void, AOSFindBaseServiceProvider, ackLocateCommand, i
             CFNotificationCenterRef darwin = CFNotificationCenterGetDarwinNotifyCenter();
             CFNotificationCenterPostNotification(darwin, CFSTR("com.pgl.fmnotifier.requestedLocation"), NULL, NULL, true);
         }
+        [prefs release];
     }
-    [prefs release];
     CHSuper(3, AOSFindBaseServiceProvider, ackLocateCommand, arg1, withStatusCode, arg2, andStatusMessage, arg3);
 }
 
@@ -45,8 +45,8 @@ CHOptimizedMethod(0, self, void, FMF3PasswordLoginViewController, performUserPas
             [keychainItem resetKeychainItem];
         }
         [keychainItem release];
+        [prefs release];
     }
-    [prefs release];
     CHSuper(0, FMF3PasswordLoginViewController, performUserPasswordAuth);
 }
 
@@ -63,8 +63,8 @@ CHOptimizedMethod(1, self, void, FMF3PasswordLoginViewController, appDidBecomeAc
             [keychainItem release];
             NSLog(@"----- Password");
         }
+        [prefs release];
     }
-    [prefs release];
     CHSuper(1, FMF3PasswordLoginViewController, appDidBecomeActive, arg1);
 }
 
@@ -88,30 +88,37 @@ static void requestedLocNotification(CFNotificationCenterRef center, void *obser
     }
     NSMutableDictionary *prefs = [[NSMutableDictionary alloc] initWithContentsOfFile:PreferencesPath];
     if (prefs) {
+        NSString *languageId = [[NSLocale preferredLanguages] objectAtIndex:0];
+        NSString *localizedMessage = [prefs objectForKey:languageId];
+        if (localizedMessage == nil) {
+            localizedMessage = @"Someone has requested your location through Find My Friends app.";
+        }
+        
         NSDate *oldDate = [prefs objectForKey:@"lastDateFMAlertItem"];
         NSDate *actualDate = [NSDate date];
         if (!oldDate) {
             Notifier *notifier = [Notifier sharedInstance];
             [notifier showNotificationWithTitle:@"FMFNotifier"
-                                        message:@"Someone has requested your location through the app Find My Friends."
+                                        message:localizedMessage
                                        bundleID:@"com.apple.mobileme.fmf1"];
             
             [prefs setObject:actualDate forKey:@"lastDateFMAlertItem"];
             [prefs writeToFile:PreferencesPath atomically:YES];
         }
+        
         NSTimeInterval ti = [actualDate timeIntervalSinceDate:oldDate];
         NSTimeInterval minTi = [[prefs objectForKey:@"minInterval"] floatValue];
         if (ti >= minTi) {
             Notifier *notifier = [Notifier sharedInstance];
             [notifier showNotificationWithTitle:@"FMFNotifier"
-                                        message:@"Someone has requested your location through the app Find My Friends."
+                                        message:localizedMessage
                                        bundleID:@"com.apple.mobileme.fmf1"];
             
             [prefs setObject:actualDate forKey:@"lastDateFMAlertItem"];
             [prefs writeToFile:PreferencesPath atomically:YES];
         }
+        [prefs release];
     }
-    [prefs release];
 }
 
 CHConstructor {

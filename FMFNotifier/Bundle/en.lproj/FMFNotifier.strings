@@ -7,9 +7,13 @@
 */
 
 "ENABLED" = "Notifications";
-"ENTER_PSW_LABEL" = "Enter Password";
 "PASSWORD" = "Password";
-"DONATION" = "Make a Donation";
+"DONATE" = "Donate";
+"PAYPAL" = "PayPal";
+"EMAIL" = "Email";
+"SUPPORT" = "Support";
 "REMEMBER_PW" = "Remember Password";
 "FOOTER1" = "Minimum interval (in seconds) at which notifications will appear.";
 "FOOTER2" = "The password is updated and stored securely at each login.";
+"FOOTER3" = "If you like to support me, you can do this with PayPal.";
+"FOOTER4" = "If you need support, you can Email me.";

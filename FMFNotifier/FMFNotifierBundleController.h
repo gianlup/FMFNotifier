@@ -17,7 +17,7 @@
 - (id)getValueForSpecifier:(PSSpecifier*)specifier;
 - (void)setValue:(id)value forSpecifier:(PSSpecifier*)specifier;
 
-- (void)followOnTwitter:(PSSpecifier*)specifier;
+- (void)makeEmail:(PSSpecifier*)specifier;
 - (void)makeDonation:(PSSpecifier*)specifier;
 
 @end

@@ -56,7 +56,6 @@
 		99F5AA2318B7976500B205AF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		99F5AA2B18B7976500B205AF /* FMFNotifierPreferences.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FMFNotifierPreferences.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		99F5AA2D18B7976500B205AF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		99F5AA3418B7976500B205AF /* control.txt */ = {isa = PBXFileReference; lastKnownFileType = text; name = control.txt; path = Package/DEBIAN/control.txt; sourceTree = "<group>"; };
 		99F5AA3618B7976500B205AF /* control */ = {isa = PBXFileReference; lastKnownFileType = text; name = control; path = Package/DEBIAN/control; sourceTree = "<group>"; };
 		99F5AA3918B7976500B205AF /* PackageVersion.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = PackageVersion.plist; sourceTree = "<group>"; };
 		99F5AA3B18B7976500B205AF /* FMFNotifierBundleController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMFNotifierBundleController.h; sourceTree = "<group>"; };
@@ -162,7 +161,6 @@
 		99F5AA3318B7976500B205AF /* DEBIAN */ = {
 			isa = PBXGroup;
 			children = (
-				99F5AA3418B7976500B205AF /* control.txt */,
 				99F5AA3618B7976500B205AF /* control */,
 			);
 			name = DEBIAN;
