@@ -3,15 +3,11 @@ Name: FMFNotifier
 Version: 1.0
 Description: Tweak that improves Find My Friends app.
 Section: Tweaks
-Depends: firmware (>= 5.0), mobilesubstrate
+Depends: firmware (>= 6.0), mobilesubstrate, preferenceloader
 Conflicts: 
 Replaces: 
 Priority: optional
 Architecture: iphoneos-arm
 Author: Gianluca Puglia
-dev: Gianluca Puglia
-Homepage: 
-Depiction: 
 Maintainer: Gianluca Puglia
-Icon: 
-
+Icon: file:///Library/PreferenceBundles/FMFNotifierPreferences.bundle/FMFNotifierIcon@2x.png

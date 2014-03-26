@@ -9,7 +9,7 @@
 		<key>cell</key>
 		<string>PSLinkCell</string>
 		<key>icon</key>
-		<string>FMFNotifierIcon.png</string>
+		<string>Icon.png</string>
 		<key>label</key>
 		<string>FMFNotifier</string>
 		<key>isController</key>

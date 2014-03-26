@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		99DF293518E3199300305C3E /* Icon~ipad.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 99DF293418E3198900305C3E /* Icon~ipad.png */; };
+		99DF293618E3199300305C3E /* Icon@2x.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 99F5AA4518B7976500B205AF /* Icon@2x.png */; };
 		99F5AA2418B7976500B205AF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99F5AA2318B7976500B205AF /* Foundation.framework */; };
 		99F5AA2C18B7976500B205AF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99F5AA2318B7976500B205AF /* Foundation.framework */; };
 		99F5AA2E18B7976500B205AF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99F5AA2D18B7976500B205AF /* UIKit.framework */; };
@@ -16,8 +18,6 @@
 		99F5AA6C18B798C700B205AF /* Notifier.h in Headers */ = {isa = PBXBuildFile; fileRef = 99F5AA6A18B798C700B205AF /* Notifier.h */; };
 		99F5AA6D18B798C700B205AF /* Notifier.m in Sources */ = {isa = PBXBuildFile; fileRef = 99F5AA6B18B798C700B205AF /* Notifier.m */; };
 		99F5AA6F18B7992C00B205AF /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99F5AA6E18B7992C00B205AF /* Security.framework */; };
-		99F5AA8518B7ADA000B205AF /* FMFNotifierIcon@2x.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 99F5AA4518B7976500B205AF /* FMFNotifierIcon@2x.png */; };
-		99F5AA8618B7ADA000B205AF /* FMFNotifierIcon.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 99F5AA4718B7976500B205AF /* FMFNotifierIcon.png */; };
 		99F5AA8718B7ADA000B205AF /* FMFNotifier.plist in CopyFiles */ = {isa = PBXBuildFile; fileRef = 99F5AA4918B7976500B205AF /* FMFNotifier.plist */; };
 		99F5AA8818B7ADA000B205AF /* FMFNotifier.strings in CopyFiles */ = {isa = PBXBuildFile; fileRef = 99F5AA8218B7ABAE00B205AF /* FMFNotifier.strings */; };
 		99F5AAA618B7B85C00B205AF /* KeychainItemWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 99F5AAA418B7B85C00B205AF /* KeychainItemWrapper.h */; };
@@ -42,8 +42,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 7;
 			files = (
-				99F5AA8518B7ADA000B205AF /* FMFNotifierIcon@2x.png in CopyFiles */,
-				99F5AA8618B7ADA000B205AF /* FMFNotifierIcon.png in CopyFiles */,
+				99DF293518E3199300305C3E /* Icon~ipad.png in CopyFiles */,
+				99DF293618E3199300305C3E /* Icon@2x.png in CopyFiles */,
 				99F5AA8718B7ADA000B205AF /* FMFNotifier.plist in CopyFiles */,
 				99F5AA8818B7ADA000B205AF /* FMFNotifier.strings in CopyFiles */,
 			);
@@ -52,6 +52,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		99DF28E118E2E86A00305C3E /* postinst */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = postinst; path = Package/DEBIAN/postinst; sourceTree = "<group>"; };
+		99DF293418E3198900305C3E /* Icon~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon~ipad.png"; path = "Bundle/Icon~ipad.png"; sourceTree = "<group>"; };
 		99F5AA2018B7976500B205AF /* FMFNotifier.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = FMFNotifier.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		99F5AA2318B7976500B205AF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		99F5AA2B18B7976500B205AF /* FMFNotifierPreferences.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FMFNotifierPreferences.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -62,8 +64,7 @@
 		99F5AA3C18B7976500B205AF /* FMFNotifierBundleController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMFNotifierBundleController.m; sourceTree = "<group>"; };
 		99F5AA3F18B7976500B205AF /* FMFNotifier.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = FMFNotifier.mm; sourceTree = "<group>"; };
 		99F5AA4318B7976500B205AF /* FMFNotifier-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "FMFNotifier-Info.plist"; path = "Bundle/FMFNotifier-Info.plist"; sourceTree = "<group>"; };
-		99F5AA4518B7976500B205AF /* FMFNotifierIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "FMFNotifierIcon@2x.png"; path = "Bundle/FMFNotifierIcon@2x.png"; sourceTree = "<group>"; };
-		99F5AA4718B7976500B205AF /* FMFNotifierIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = FMFNotifierIcon.png; path = Bundle/FMFNotifierIcon.png; sourceTree = "<group>"; };
+		99F5AA4518B7976500B205AF /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "Bundle/Icon@2x.png"; sourceTree = "<group>"; };
 		99F5AA4918B7976500B205AF /* FMFNotifier.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = FMFNotifier.plist; path = Bundle/FMFNotifier.plist; sourceTree = "<group>"; };
 		99F5AA4E18B7976500B205AF /* FMFNotifier.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = FMFNotifier.plist; path = Package/Library/PreferenceLoader/Preferences/FMFNotifier.plist; sourceTree = "<group>"; };
 		99F5AA5218B7976500B205AF /* FMFNotifier.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = FMFNotifier.plist; path = Package/Library/MobileSubstrate/DynamicLibraries/FMFNotifier.plist; sourceTree = "<group>"; };
@@ -161,6 +162,7 @@
 		99F5AA3318B7976500B205AF /* DEBIAN */ = {
 			isa = PBXGroup;
 			children = (
+				99DF28E118E2E86A00305C3E /* postinst */,
 				99F5AA3618B7976500B205AF /* control */,
 			);
 			name = DEBIAN;
@@ -178,9 +180,9 @@
 		99F5AA4218B7976500B205AF /* Bundle */ = {
 			isa = PBXGroup;
 			children = (
+				99DF293418E3198900305C3E /* Icon~ipad.png */,
 				99F5AA4318B7976500B205AF /* FMFNotifier-Info.plist */,
-				99F5AA4518B7976500B205AF /* FMFNotifierIcon@2x.png */,
-				99F5AA4718B7976500B205AF /* FMFNotifierIcon.png */,
+				99F5AA4518B7976500B205AF /* Icon@2x.png */,
 				99F5AA4918B7976500B205AF /* FMFNotifier.plist */,
 				99F5AA8218B7ABAE00B205AF /* FMFNotifier.strings */,
 			);
@@ -549,6 +551,7 @@
 				INFOPLIST_FILE = "FMFNotifier/Bundle/FMFNotifier-Info.plist";
 				INSTALL_PATH = /Library/PreferenceBundles;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = bundle;
 			};
 			name = Debug;
@@ -567,6 +570,7 @@
 				INFOPLIST_FILE = "FMFNotifier/Bundle/FMFNotifier-Info.plist";
 				INSTALL_PATH = /Library/PreferenceBundles;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = bundle;
 			};
 			name = Release;

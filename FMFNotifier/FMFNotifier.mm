@@ -15,14 +15,17 @@ CHDeclareClass(AOSFindBaseServiceProvider);
 CHDeclareClass(FMF3PasswordLoginViewController);
 
 CHOptimizedMethod(3, self, void, AOSFindBaseServiceProvider, ackLocateCommand, id, arg1, withStatusCode, int, arg2, andStatusMessage, id, arg3) {
-    NSMutableDictionary *prefs = [[NSMutableDictionary alloc] initWithContentsOfFile:PreferencesPath];
-    if (prefs) {
-        NSNumber *nE = [prefs objectForKey:@"notificationEnabled"];
-        if ([nE boolValue]) {
-            CFNotificationCenterRef darwin = CFNotificationCenterGetDarwinNotifyCenter();
-            CFNotificationCenterPostNotification(darwin, CFSTR("com.pgl.fmnotifier.requestedLocation"), NULL, NULL, true);
+    NSString *ackURL = [(NSDictionary *)arg1 objectForKey:@"ackURL"];
+    if ([ackURL rangeOfString:@"fmf"].location != NSNotFound && [ackURL rangeOfString:@"findme"].location == NSNotFound) {
+        NSMutableDictionary *prefs = [[NSMutableDictionary alloc] initWithContentsOfFile:PreferencesPath];
+        if (prefs) {
+            NSNumber *nE = [prefs objectForKey:@"notificationEnabled"];
+            if ([nE boolValue]) {
+                CFNotificationCenterRef darwin = CFNotificationCenterGetDarwinNotifyCenter();
+                CFNotificationCenterPostNotification(darwin, CFSTR("com.pgl.fmnotifier.requestedLocation"), NULL, NULL, true);
+            }
+            [prefs release];
         }
-        [prefs release];
     }
     CHSuper(3, AOSFindBaseServiceProvider, ackLocateCommand, arg1, withStatusCode, arg2, andStatusMessage, arg3);
 }
@@ -35,7 +38,6 @@ CHOptimizedMethod(0, self, void, FMF3PasswordLoginViewController, performUserPas
         if ([rP boolValue]) {
             UITextField *tf = CHIvar(self, _passwordTextField, UITextField*);
             [keychainItem setObject:tf.text forKey:(__bridge id)kSecValueData];
-            NSLog(@"----- Saved ");
         }
         else {
             [keychainItem resetKeychainItem];
@@ -57,7 +59,6 @@ CHOptimizedMethod(1, self, void, FMF3PasswordLoginViewController, appDidBecomeAc
             [tf setText:pw];
             [tf becomeFirstResponder];
             [keychainItem release];
-            NSLog(@"----- Password");
         }
         [prefs release];
     }
