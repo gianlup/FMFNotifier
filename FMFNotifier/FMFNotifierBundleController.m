@@ -3,7 +3,7 @@
 //  FMFNotifier
 //
 //  Created by Gianluca Puglia on 21/02/14.
-//  Copyright (c) 2014 __MyCompanyName__. All rights reserved.
+//  Copyright (c) 2014 Gianluca Puglia. All rights reserved.
 //
 
 #import "FMFNotifierBundleController.h"

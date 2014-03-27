@@ -3,7 +3,7 @@
 //  FMFNotifier
 //
 //  Created by Gianluca Puglia on 21/02/14.
-//  Copyright (c) 2014 __MyCompanyName__. All rights reserved.
+//  Copyright (c) 2014 Gianluca Puglia. All rights reserved.
 //
 
 #import "CaptainHook/CaptainHook.h"
@@ -16,20 +16,19 @@ CHDeclareClass(FMF3PasswordLoginViewController);
 
 CHOptimizedMethod(3, self, void, AOSFindBaseServiceProvider, ackLocateCommand, id, arg1, withStatusCode, int, arg2, andStatusMessage, id, arg3) {
     if (![[(NSDictionary *)arg1 objectForKey:@"findMyiPhone"] boolValue]) {
-        NSDictionary *prefs = [[NSDictionary alloc] initWithContentsOfFile:PreferencesPath];
+        NSDictionary *prefs = [NSDictionary dictionaryWithContentsOfFile:PreferencesPath];
         if (prefs) {
             if ([[prefs objectForKey:@"notificationEnabled"] boolValue]) {
                 CFNotificationCenterRef darwin = CFNotificationCenterGetDarwinNotifyCenter();
                 CFNotificationCenterPostNotification(darwin, CFSTR("com.pgl.fmnotifier.requestedLocation"), NULL, NULL, true);
             }
-            [prefs release];
         }
     }
     CHSuper(3, AOSFindBaseServiceProvider, ackLocateCommand, arg1, withStatusCode, arg2, andStatusMessage, arg3);
 }
 
 CHOptimizedMethod(0, self, void, FMF3PasswordLoginViewController, performUserPasswordAuth) {
-    NSDictionary *prefs = [[NSDictionary alloc] initWithContentsOfFile:PreferencesPath];
+    NSDictionary *prefs = [NSDictionary dictionaryWithContentsOfFile:PreferencesPath];
     if (prefs) {
         KeychainItemWrapper *keychainItem = [[KeychainItemWrapper alloc] initWithIdentifier:@"FMFNotifier" accessGroup:nil];
         if ([[prefs objectForKey:@"rememberPassword"] boolValue]) {
@@ -40,13 +39,12 @@ CHOptimizedMethod(0, self, void, FMF3PasswordLoginViewController, performUserPas
             [keychainItem resetKeychainItem];
         }
         [keychainItem release];
-        [prefs release];
     }
     CHSuper(0, FMF3PasswordLoginViewController, performUserPasswordAuth);
 }
 
 CHOptimizedMethod(1, self, void, FMF3PasswordLoginViewController, appDidBecomeActive, id, arg1) {
-    NSDictionary *prefs = [[NSDictionary alloc] initWithContentsOfFile:PreferencesPath];
+    NSDictionary *prefs = [NSDictionary dictionaryWithContentsOfFile:PreferencesPath];
     if (prefs) {
         if ([[prefs objectForKey:@"rememberPassword"] boolValue]) {
             KeychainItemWrapper *keychainItem = [[KeychainItemWrapper alloc] initWithIdentifier:@"FMFNotifier" accessGroup:nil];
@@ -56,7 +54,6 @@ CHOptimizedMethod(1, self, void, FMF3PasswordLoginViewController, appDidBecomeAc
             [tf becomeFirstResponder];
             [keychainItem release];
         }
-        [prefs release];
     }
     CHSuper(1, FMF3PasswordLoginViewController, appDidBecomeActive, arg1);
 }
@@ -79,7 +76,7 @@ static void requestedLocNotification(CFNotificationCenterRef center, void *obser
     if (!objc_getClass("SpringBoard")) {
         return;
     }
-    NSMutableDictionary *prefs = [[NSMutableDictionary alloc] initWithContentsOfFile:PreferencesPath];
+    NSMutableDictionary *prefs = [NSMutableDictionary dictionaryWithContentsOfFile:PreferencesPath];
     if (prefs) {
         NSString *languageId = [[NSLocale preferredLanguages] objectAtIndex:0];
         NSString *localizedMessage = [prefs objectForKey:languageId];
@@ -110,7 +107,6 @@ static void requestedLocNotification(CFNotificationCenterRef center, void *obser
             [prefs setObject:actualDate forKey:@"lastDateFMAlertItem"];
             [prefs writeToFile:PreferencesPath atomically:YES];
         }
-        [prefs release];
     }
 }
 
