@@ -10,4 +10,4 @@ Priority: optional
 Architecture: iphoneos-arm
 Author: Gianluca Puglia
 Maintainer: Gianluca Puglia
-Icon: file:///Library/PreferenceBundles/FMFNotifierPreferences.bundle/FMFNotifierIcon@2x.png
+Icon: file:///Library/PreferenceBundles/FMFNotifierPreferences.bundle/Icon@2x.png
